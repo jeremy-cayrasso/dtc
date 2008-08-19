@@ -1,3 +1,10 @@
+dtc (0.29.8-1) unstable; urgency=low
+
+  * New upstream release with corrections for Lenny, backported from the master
+    branch of the Git, to add corrections and not features.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Wed, 20 Aug 2008 05:07:11 +0800
+
 dtc (0.29.6-1) unstable; urgency=low
 
   * New upstream release.
