@@ -23,7 +23,7 @@ function cleanSPAMFolder($path){
 		$cmd = "if [ -f \"$path/courierimapacl\" ] ; then touch \"$path/courierimapacl\" ; fi";
 		echo $cmd."\n";
 		exec($cmd);
-		$cmd = "find '$path' -atime +20 -exec rm {} \\;";
+		$cmd = "find '$path' -mtime +20 -exec rm {} \\;";
 		echo $cmd."\n";
 		exec($cmd);
 	}
