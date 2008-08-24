@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.27.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-18 15:15+0800\n"
+"POT-Creation-Date: 2008-08-23 20:37+0800\n"
 "PO-Revision-Date: 2007-12-26 14:40+0800\n"
 "Last-Translator: Thomas Goirand <thomas@goirand.fr>\n"
 "Language-Team: Swedish <se@li.org>\n"
@@ -46,6 +46,10 @@ msgstr ""
 #: shared/inc/sql/vps.php:202 shared/inc/sql/vps.php:212
 #: shared/inc/sql/vps.php:222
 msgid " file "
+msgstr ""
+
+#: shared/inc/forms/vps_installation.php:298
+msgid " maybe there are no logs yet?"
 msgstr ""
 
 #: shared/dtcrm/draw.php:79
@@ -221,11 +225,11 @@ msgstr ""
 msgid "Access not granted line "
 msgstr ""
 
-#: admin/inc/renewals.php:259
+#: admin/inc/renewals.php:262
 msgid "Account name"
 msgstr ""
 
-#: admin/inc/renewals.php:270
+#: admin/inc/renewals.php:273
 msgid "Account number"
 msgstr ""
 
@@ -237,7 +241,7 @@ msgstr ""
 msgid "Act as backup mail server for the following servers:"
 msgstr ""
 
-#: admin/inc/renewals.php:425 admin/inc/renewals.php:709
+#: admin/inc/renewals.php:428 admin/inc/renewals.php:712
 #: admin/inc/draw_user_admin.php:246 admin/inc/draw_user_admin.php:304
 #: admin/inc/draw_user_admin.php:323 admin/dtcrm/main.php:217
 #: shared/inc/forms/database.php:37 shared/inc/forms/database.php:76
@@ -332,7 +336,7 @@ msgstr ""
 msgid "Address (line1): "
 msgstr "Address:"
 
-#: admin/inc/renewals.php:347
+#: admin/inc/renewals.php:350
 #, fuzzy
 msgid "Address (line2):"
 msgstr "Address:"
@@ -344,7 +348,7 @@ msgstr "Address:"
 msgid "Address (line2): "
 msgstr "Address:"
 
-#: admin/inc/renewals.php:350
+#: admin/inc/renewals.php:353
 #, fuzzy
 msgid "Address (line3):"
 msgstr "Address:"
@@ -365,7 +369,7 @@ msgstr "Address:"
 msgid "Address of your main MX server:"
 msgstr ""
 
-#: admin/inc/renewals.php:344 admin/inc/dtc_config.php:1452
+#: admin/inc/renewals.php:347 admin/inc/dtc_config.php:1452
 #: shared/inc/forms/my_account.php:207
 msgid "Address:"
 msgstr "Address:"
@@ -449,7 +453,7 @@ msgstr ""
 msgid "American Samoa"
 msgstr ""
 
-#: admin/inc/renewals.php:578 shared/securepay/pay_functions.php:38
+#: admin/inc/renewals.php:581 shared/securepay/pay_functions.php:38
 msgid "Amount"
 msgstr ""
 
@@ -627,11 +631,11 @@ msgstr ""
 msgid "Bank accounts & payments"
 msgstr ""
 
-#: admin/inc/renewals.php:248
+#: admin/inc/renewals.php:251
 msgid "Bank accounts edition"
 msgstr ""
 
-#: admin/inc/renewals.php:277
+#: admin/inc/renewals.php:280
 #, fuzzy
 msgid "Bank address"
 msgstr "Address:"
@@ -732,7 +736,7 @@ msgstr ""
 msgid "Byelorussian SSR"
 msgstr ""
 
-#: shared/drawlib/dtc_functions.php:799
+#: shared/drawlib/dtc_functions.php:804
 msgid "Bytes"
 msgstr ""
 
@@ -909,7 +913,7 @@ msgstr ""
 msgid "Christmas Island"
 msgstr ""
 
-#: admin/inc/renewals.php:353 shared/inc/forms/my_account.php:210
+#: admin/inc/renewals.php:356 shared/inc/forms/my_account.php:210
 msgid "City:"
 msgstr ""
 
@@ -923,13 +927,13 @@ msgstr ""
 msgid "Click"
 msgstr ""
 
-#: admin/inc/renewals.php:422 admin/inc/renewals.php:639
-#: admin/inc/renewals.php:670 admin/inc/renewals.php:705
-#: admin/inc/renewals.php:785
+#: admin/inc/renewals.php:425 admin/inc/renewals.php:642
+#: admin/inc/renewals.php:673 admin/inc/renewals.php:708
+#: admin/inc/renewals.php:788
 msgid "Client"
 msgstr ""
 
-#: admin/inc/renewals.php:422
+#: admin/inc/renewals.php:425
 msgid "Client ID"
 msgstr ""
 
@@ -937,7 +941,7 @@ msgstr ""
 msgid "Client ID:"
 msgstr ""
 
-#: admin/inc/renewals.php:423
+#: admin/inc/renewals.php:426
 msgid "Client country"
 msgstr ""
 
@@ -950,8 +954,8 @@ msgstr ""
 msgid "Client interface"
 msgstr ""
 
-#: admin/inc/renewals.php:646 admin/inc/renewals.php:685
-#: admin/inc/renewals.php:726 admin/inc/renewals.php:800
+#: admin/inc/renewals.php:649 admin/inc/renewals.php:688
+#: admin/inc/renewals.php:729 admin/inc/renewals.php:803
 msgid "Client name not found!"
 msgstr ""
 
@@ -988,7 +992,7 @@ msgstr ""
 msgid "Companies"
 msgstr ""
 
-#: admin/inc/renewals.php:261
+#: admin/inc/renewals.php:264
 msgid "Company"
 msgstr ""
 
@@ -996,7 +1000,7 @@ msgstr ""
 msgid "Company name"
 msgstr ""
 
-#: admin/inc/renewals.php:330 admin/inc/dtc_config.php:1447
+#: admin/inc/renewals.php:333 admin/inc/dtc_config.php:1447
 #: shared/inc/forms/my_account.php:202
 msgid "Company name:"
 msgstr ""
@@ -1108,6 +1112,10 @@ msgstr ""
 msgid "Could not found subdomain in table for folder deletion"
 msgstr ""
 
+#: shared/inc/forms/vps_installation.php:298
+msgid "Could not get VPS install log. Error: "
+msgstr ""
+
 #: shared/inc/forms/vps_monitoring.php:126
 #: shared/inc/forms/vps_installation.php:73
 msgid ""
@@ -1151,7 +1159,7 @@ msgstr ""
 msgid "Country code seems incorrect."
 msgstr ""
 
-#: admin/inc/renewals.php:362 admin/inc/dtc_config.php:1455
+#: admin/inc/renewals.php:365 admin/inc/dtc_config.php:1455
 #: shared/inc/forms/my_account.php:212
 msgid "Country:"
 msgstr ""
@@ -1183,7 +1191,7 @@ msgstr ""
 msgid "Create a new nick-handle:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:126
+#: shared/inc/forms/subdomain.php:140
 msgid "Create a subdomain: "
 msgstr ""
 
@@ -1204,7 +1212,7 @@ msgstr ""
 msgid "Cuba"
 msgstr ""
 
-#: admin/inc/renewals.php:211 admin/inc/renewals.php:280
+#: admin/inc/renewals.php:211 admin/inc/renewals.php:283
 msgid "Currency"
 msgstr ""
 
@@ -1345,7 +1353,7 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
-#: admin/inc/renewals.php:708
+#: admin/inc/renewals.php:711
 msgid "Days of expiration"
 msgstr ""
 
@@ -1374,11 +1382,11 @@ msgstr ""
 msgid "Dedicated server hostname"
 msgstr ""
 
-#: admin/inc/renewals.php:777
+#: admin/inc/renewals.php:780
 msgid "Dedicated servers renewals"
 msgstr ""
 
-#: admin/inc/renewals.php:567
+#: admin/inc/renewals.php:570
 msgid "Dedicated servers: "
 msgstr ""
 
@@ -1386,7 +1394,7 @@ msgstr ""
 msgid "Default company invoicing:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:113
+#: shared/inc/forms/subdomain.php:116
 msgid "Default subdomain: "
 msgstr ""
 
@@ -1394,7 +1402,7 @@ msgstr ""
 msgid "Defaut TTL for your zonefiles:"
 msgstr ""
 
-#: admin/inc/renewals.php:476 admin/inc/draw_user_admin.php:290
+#: admin/inc/renewals.php:479 admin/inc/draw_user_admin.php:290
 #: admin/inc/draw_user_admin.php:310 shared/inc/forms/database.php:53
 #: shared/inc/forms/database.php:99 shared/inc/forms/domain_stats.php:104
 msgid "Delete"
@@ -1603,11 +1611,11 @@ msgstr ""
 msgid "Dominican Republic"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:245
+#: shared/inc/forms/subdomain.php:259
 msgid "Dynamic IP update login: "
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:251
+#: shared/inc/forms/subdomain.php:265
 msgid "Dynamic IP update password: "
 msgstr ""
 
@@ -1648,7 +1656,7 @@ msgstr ""
 msgid "Edit mailing lists of domain:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:128
+#: shared/inc/forms/subdomain.php:142
 msgid "Edit one of your subdomains"
 msgstr ""
 
@@ -1664,8 +1672,8 @@ msgstr ""
 msgid "El Salvador"
 msgstr ""
 
-#: admin/inc/renewals.php:639 admin/inc/renewals.php:670
-#: admin/inc/renewals.php:706 admin/inc/renewals.php:785
+#: admin/inc/renewals.php:642 admin/inc/renewals.php:673
+#: admin/inc/renewals.php:709 admin/inc/renewals.php:788
 msgid "Email"
 msgstr ""
 
@@ -1698,7 +1706,7 @@ msgstr ""
 msgid "Email user and domain files generated !"
 msgstr ""
 
-#: admin/inc/renewals.php:371 shared/inc/forms/aliases.php:48
+#: admin/inc/renewals.php:374 shared/inc/forms/aliases.php:48
 #: shared/inc/forms/my_account.php:215
 msgid "Email:"
 msgstr ""
@@ -1773,8 +1781,8 @@ msgstr ""
 msgid "Expiration"
 msgstr ""
 
-#: admin/inc/renewals.php:639 admin/inc/renewals.php:670
-#: admin/inc/renewals.php:707 admin/inc/renewals.php:785
+#: admin/inc/renewals.php:642 admin/inc/renewals.php:673
+#: admin/inc/renewals.php:710 admin/inc/renewals.php:788
 msgid "Expiration date"
 msgstr ""
 
@@ -1830,7 +1838,7 @@ msgstr ""
 msgid "Falkland Islands (Malvinas)"
 msgstr ""
 
-#: admin/inc/renewals.php:341
+#: admin/inc/renewals.php:344
 msgid "Familly name:"
 msgstr ""
 
@@ -1848,7 +1856,7 @@ msgstr ""
 msgid "Faroe Islands"
 msgstr ""
 
-#: admin/inc/renewals.php:368 shared/inc/forms/my_account.php:214
+#: admin/inc/renewals.php:371 shared/inc/forms/my_account.php:214
 msgid "Fax:"
 msgstr ""
 
@@ -1884,7 +1892,7 @@ msgstr ""
 msgid "Finland"
 msgstr ""
 
-#: admin/inc/renewals.php:338 shared/inc/forms/my_account.php:205
+#: admin/inc/renewals.php:341 shared/inc/forms/my_account.php:205
 msgid "First name:"
 msgstr ""
 
@@ -1930,7 +1938,7 @@ msgstr ""
 msgid "Full path to location of the public.key file for DomainKey support:"
 msgstr ""
 
-#: shared/drawlib/dtc_functions.php:796
+#: shared/drawlib/dtc_functions.php:801
 msgid "GBytes"
 msgstr ""
 
@@ -1954,7 +1962,7 @@ msgstr ""
 msgid "General information of "
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:161
+#: shared/inc/forms/subdomain.php:175
 msgid "Generate a vhost entry for this subdomain:"
 msgstr ""
 
@@ -2054,11 +2062,11 @@ msgstr ""
 msgid "Haiti"
 msgstr ""
 
-#: admin/inc/renewals.php:752
+#: admin/inc/renewals.php:755
 msgid "Has a dedicated"
 msgstr ""
 
-#: admin/inc/renewals.php:749
+#: admin/inc/renewals.php:752
 #, fuzzy
 msgid "Has some domains"
 msgstr "Address:"
@@ -2178,7 +2186,7 @@ msgstr "Address:"
 msgid "IP address of the primary DNS server:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:156
+#: shared/inc/forms/subdomain.php:170
 msgid "IP address or CNAME: "
 msgstr ""
 
@@ -2303,7 +2311,7 @@ msgid ""
 "Return-Path: are deleted no matter what."
 msgstr ""
 
-#: admin/inc/submit_root_querys.php:270
+#: admin/inc/submit_root_querys.php:274
 msgid ""
 "Incorect admin login format: it should consist of only lowercase letters or "
 "numbers or the \"-\" sign, and should be between 4 and 16 chars long.<br>\n"
@@ -2435,7 +2443,7 @@ msgstr ""
 msgid "Is company radio button is wrong!"
 msgstr ""
 
-#: admin/inc/renewals.php:336
+#: admin/inc/renewals.php:339
 msgid "Is it a company:"
 msgstr ""
 
@@ -2485,7 +2493,7 @@ msgstr ""
 msgid "Kenya"
 msgstr ""
 
-#: admin/inc/renewals.php:747
+#: admin/inc/renewals.php:750
 msgid "Kill VPS and owner"
 msgstr ""
 
@@ -2632,7 +2640,7 @@ msgstr ""
 msgid "List of your registred name-servers:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:125
+#: shared/inc/forms/subdomain.php:139
 msgid "List of your subdomains: "
 msgstr ""
 
@@ -2682,8 +2690,8 @@ msgstr ""
 msgid "Location of user's database: "
 msgstr ""
 
-#: admin/inc/renewals.php:639 admin/inc/renewals.php:670
-#: admin/inc/renewals.php:704 admin/inc/renewals.php:785
+#: admin/inc/renewals.php:642 admin/inc/renewals.php:673
+#: admin/inc/renewals.php:707 admin/inc/renewals.php:788
 #: admin/inc/draw_user_admin.php:246 admin/inc/draw_user_admin.php:304
 #: admin/inc/draw_user_admin.php:323 admin/inc/draw_user_admin.php:409
 #: admin/inc/dtc_config.php:340 admin/inc/dtc_config.php:959
@@ -2732,7 +2740,7 @@ msgstr ""
 msgid "Luxembourg"
 msgstr ""
 
-#: shared/drawlib/dtc_functions.php:797 shared/inc/forms/email.php:587
+#: shared/drawlib/dtc_functions.php:802 shared/inc/forms/email.php:587
 #: shared/inc/forms/email.php:594
 msgid "MBytes"
 msgstr ""
@@ -2993,11 +3001,11 @@ msgstr ""
 msgid "Montserrat"
 msgstr ""
 
-#: admin/inc/renewals.php:755
+#: admin/inc/renewals.php:758
 msgid "More than one VPS"
 msgstr ""
 
-#: admin/inc/renewals.php:758
+#: admin/inc/renewals.php:761
 msgid "More than one login"
 msgstr ""
 
@@ -3041,8 +3049,8 @@ msgstr ""
 msgid "Myanmar"
 msgstr ""
 
-#: admin/inc/renewals.php:436 admin/inc/renewals.php:437
-#: admin/inc/renewals.php:438
+#: admin/inc/renewals.php:439 admin/inc/renewals.php:440
+#: admin/inc/renewals.php:441
 msgid "N/A"
 msgstr ""
 
@@ -3208,7 +3216,7 @@ msgstr ""
 msgid "New service registered successfully!"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:127
+#: shared/inc/forms/subdomain.php:141
 msgid "New subdomain"
 msgstr ""
 
@@ -3263,12 +3271,12 @@ msgstr ""
 #: shared/inc/forms/root_admin.php:58 shared/inc/forms/root_admin.php:68
 #: shared/inc/forms/root_admin.php:78 shared/inc/forms/root_admin.php:236
 #: shared/inc/forms/root_admin.php:353 shared/inc/forms/root_admin.php:358
-#: shared/inc/forms/subdomain.php:160 shared/inc/forms/subdomain.php:174
-#: shared/inc/forms/ticket.php:130
+#: shared/inc/forms/subdomain.php:133 shared/inc/forms/subdomain.php:174
+#: shared/inc/forms/subdomain.php:188 shared/inc/forms/ticket.php:130
 msgid "No"
 msgstr ""
 
-#: admin/inc/renewals.php:667
+#: admin/inc/renewals.php:670
 msgid "No SSL IP expired"
 msgstr ""
 
@@ -3276,7 +3284,7 @@ msgstr ""
 msgid "No SSL token available: contact your administrator to request it."
 msgstr ""
 
-#: admin/inc/renewals.php:701
+#: admin/inc/renewals.php:704
 msgid "No VPS expired"
 msgstr ""
 
@@ -3288,7 +3296,7 @@ msgstr ""
 msgid "No catch-all"
 msgstr ""
 
-#: admin/inc/renewals.php:429 admin/inc/renewals.php:430
+#: admin/inc/renewals.php:432 admin/inc/renewals.php:433
 msgid "No client id"
 msgstr ""
 
@@ -3296,7 +3304,7 @@ msgstr ""
 msgid "No completed orders found."
 msgstr ""
 
-#: admin/inc/renewals.php:782
+#: admin/inc/renewals.php:785
 msgid "No dedicated server expired"
 msgstr ""
 
@@ -3312,7 +3320,7 @@ msgstr ""
 msgid "No parking"
 msgstr ""
 
-#: admin/inc/renewals.php:419
+#: admin/inc/renewals.php:422
 msgid "No past payments for this period"
 msgstr ""
 
@@ -3332,7 +3340,7 @@ msgstr ""
 msgid "No product"
 msgstr ""
 
-#: admin/inc/renewals.php:636
+#: admin/inc/renewals.php:639
 msgid "No shared account expired."
 msgstr ""
 
@@ -3375,7 +3383,7 @@ msgstr ""
 msgid "Not registering"
 msgstr ""
 
-#: admin/inc/renewals.php:374
+#: admin/inc/renewals.php:377
 msgid "Note:"
 msgstr ""
 
@@ -3430,7 +3438,7 @@ msgstr ""
 msgid "Number of active ssh accounts:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:135
+#: shared/inc/forms/subdomain.php:149
 msgid "Number of active subdomains:"
 msgstr ""
 
@@ -3569,7 +3577,7 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: admin/inc/submit_root_querys.php:274
+#: admin/inc/submit_root_querys.php:278
 msgid ""
 "Password consist of only letters and numbers (a-zA-Z0-9) and should be "
 "between 6 and 16 chars long.<br>\n"
@@ -3658,7 +3666,7 @@ msgstr ""
 msgid "PayPal test account email (sandbox): "
 msgstr ""
 
-#: admin/inc/renewals.php:413
+#: admin/inc/renewals.php:416
 msgid "Payements for the period: "
 msgstr ""
 
@@ -3666,7 +3674,7 @@ msgstr ""
 msgid "Payment complete. Proceed to checkout"
 msgstr ""
 
-#: admin/inc/renewals.php:229 admin/inc/renewals.php:424
+#: admin/inc/renewals.php:229 admin/inc/renewals.php:427
 #: admin/inc/draw_user_admin.php:323
 msgid "Payment date"
 msgstr ""
@@ -3675,11 +3683,11 @@ msgstr ""
 msgid "Payment gateway"
 msgstr ""
 
-#: admin/inc/renewals.php:578 shared/inc/forms/invoices.php:23
+#: admin/inc/renewals.php:581 shared/inc/forms/invoices.php:23
 msgid "Payment gateway cost"
 msgstr ""
 
-#: admin/inc/renewals.php:460
+#: admin/inc/renewals.php:463
 msgid "Payment not found"
 msgstr ""
 
@@ -3687,7 +3695,7 @@ msgstr ""
 msgid "Payment system"
 msgstr ""
 
-#: admin/inc/renewals.php:289
+#: admin/inc/renewals.php:292
 msgid "Payment type edition"
 msgstr ""
 
@@ -3700,7 +3708,7 @@ msgstr ""
 msgid "Pending"
 msgstr ""
 
-#: admin/inc/renewals.php:424 admin/inc/renewals.php:578
+#: admin/inc/renewals.php:427 admin/inc/renewals.php:581
 #: admin/dtcrm/product_manager.php:36 admin/dtcrm/product_manager.php:109
 #: admin/dtcrm/product_manager.php:172 admin/dtcrm/product_manager.php:235
 #: shared/dtcrm/draw.php:87
@@ -3725,7 +3733,7 @@ msgstr ""
 msgid "Phone number: "
 msgstr ""
 
-#: admin/inc/renewals.php:365
+#: admin/inc/renewals.php:368
 msgid "Phone:"
 msgstr ""
 
@@ -3837,7 +3845,7 @@ msgstr ""
 msgid "Proceed to transfer"
 msgstr ""
 
-#: admin/inc/renewals.php:422 admin/inc/draw_user_admin.php:246
+#: admin/inc/renewals.php:425 admin/inc/draw_user_admin.php:246
 #: admin/inc/draw_user_admin.php:323 client/new_account_form.php:542
 #: shared/dtcrm/draw.php:86 shared/inc/forms/invoices.php:23
 #: shared/inc/forms/root_admin.php:566
@@ -3865,7 +3873,7 @@ msgstr ""
 msgid "Product name"
 msgstr ""
 
-#: admin/inc/renewals.php:450
+#: admin/inc/renewals.php:453
 msgid "Product not found"
 msgstr ""
 
@@ -3889,7 +3897,7 @@ msgstr ""
 msgid "Production server"
 msgstr ""
 
-#: admin/inc/renewals.php:578
+#: admin/inc/renewals.php:581
 msgid "Profit"
 msgstr ""
 
@@ -4199,11 +4207,11 @@ msgstr ""
 msgid "SSL IP addresses"
 msgstr "Address:"
 
-#: admin/inc/renewals.php:662
+#: admin/inc/renewals.php:665
 msgid "SSL IPs renewals"
 msgstr ""
 
-#: admin/inc/renewals.php:565
+#: admin/inc/renewals.php:568
 msgid "SSL IPs renewals: "
 msgstr ""
 
@@ -4227,7 +4235,7 @@ msgstr ""
 msgid "SSL tokens"
 msgstr ""
 
-#: admin/inc/renewals.php:273
+#: admin/inc/renewals.php:276
 msgid "SWIFT"
 msgstr ""
 
@@ -4276,7 +4284,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:196
+#: shared/inc/forms/subdomain.php:210
 msgid "Sbox cgi-bin protection: "
 msgstr ""
 
@@ -4340,7 +4348,7 @@ msgstr ""
 msgid "Serbia"
 msgstr ""
 
-#: admin/inc/renewals.php:785
+#: admin/inc/renewals.php:788
 msgid "Server"
 msgstr ""
 
@@ -4402,7 +4410,7 @@ msgstr ""
 msgid "Server:"
 msgstr ""
 
-#: admin/inc/renewals.php:422 admin/inc/dtc_config.php:1539
+#: admin/inc/renewals.php:425 admin/inc/dtc_config.php:1539
 msgid "Service country"
 msgstr ""
 
@@ -4422,15 +4430,15 @@ msgstr ""
 msgid "Shared"
 msgstr ""
 
-#: admin/inc/renewals.php:631
+#: admin/inc/renewals.php:634
 msgid "Shared hosting renewals:"
 msgstr ""
 
-#: admin/inc/renewals.php:564
+#: admin/inc/renewals.php:567
 msgid "Shared hosting: "
 msgstr ""
 
-#: admin/inc/renewals.php:328
+#: admin/inc/renewals.php:331
 msgid "Short name:"
 msgstr ""
 
@@ -4438,7 +4446,7 @@ msgstr ""
 msgid "Short name: "
 msgstr ""
 
-#: admin/inc/renewals.php:771
+#: admin/inc/renewals.php:774
 msgid "Shutdown"
 msgstr ""
 
@@ -4474,7 +4482,7 @@ msgstr ""
 msgid "Sorry, the domain name "
 msgstr ""
 
-#: admin/inc/renewals.php:266
+#: admin/inc/renewals.php:269
 msgid "Sort code"
 msgstr ""
 
@@ -4502,7 +4510,7 @@ msgstr ""
 msgid "Stat script generated !"
 msgstr ""
 
-#: admin/inc/renewals.php:359 shared/inc/forms/my_account.php:211
+#: admin/inc/renewals.php:362 shared/inc/forms/my_account.php:211
 msgid "State:"
 msgstr ""
 
@@ -4581,7 +4589,7 @@ msgstr ""
 msgid "Subdomain max"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:150
+#: shared/inc/forms/subdomain.php:164
 msgid "Subdomain name: "
 msgstr ""
 
@@ -4694,7 +4702,7 @@ msgstr ""
 msgid "TRANSFER CHECK SUCCESSFUL"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:178
+#: shared/inc/forms/subdomain.php:192
 msgid "TXT field of the subdomain: "
 msgstr ""
 
@@ -4875,12 +4883,12 @@ msgstr ""
 msgid "This server location: "
 msgstr "Login"
 
-#: shared/inc/forms/subdomain.php:183
+#: shared/inc/forms/subdomain.php:197
 msgid ""
 "This subdomain is a nameserver (NS)<br>entry for the following subdomain: "
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:169
+#: shared/inc/forms/subdomain.php:183
 msgid "This subdomain is a service (SRV)<br>entry for the following port: "
 msgstr ""
 
@@ -4949,7 +4957,7 @@ msgstr ""
 msgid "Tonga"
 msgstr ""
 
-#: admin/inc/renewals.php:424 shared/securepay/pay_functions.php:38
+#: admin/inc/renewals.php:427 shared/securepay/pay_functions.php:38
 msgid "Total"
 msgstr ""
 
@@ -4975,7 +4983,7 @@ msgstr ""
 msgid "Total price: "
 msgstr ""
 
-#: admin/inc/renewals.php:484
+#: admin/inc/renewals.php:487
 msgid "Total recurring incomes per month:"
 msgstr ""
 
@@ -4995,7 +5003,7 @@ msgstr ""
 msgid "Total transfered bytes this month:"
 msgstr ""
 
-#: admin/inc/renewals.php:569
+#: admin/inc/renewals.php:572
 msgid "Total: "
 msgstr ""
 
@@ -5065,7 +5073,7 @@ msgstr ""
 msgid "Type of encryption for connecting to Tucows server:"
 msgstr ""
 
-#: admin/inc/renewals.php:299
+#: admin/inc/renewals.php:302
 msgid "Type of payment"
 msgstr ""
 
@@ -5147,7 +5155,7 @@ msgstr ""
 msgid "Upstream provider editor"
 msgstr ""
 
-#: admin/inc/renewals.php:308
+#: admin/inc/renewals.php:311
 msgid "Upstream provider list edition"
 msgstr ""
 
@@ -5187,8 +5195,12 @@ msgstr ""
 msgid "Use WebMoney: "
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:232
+#: shared/inc/forms/subdomain.php:246
 msgid "Use an SSL vhost using this IP: "
+msgstr ""
+
+#: shared/inc/forms/subdomain.php:133
+msgid "Use as wildcard for the domain:"
 msgstr ""
 
 #: admin/inc/dtc_config.php:778
@@ -5223,7 +5235,7 @@ msgstr ""
 msgid "Use paypal: "
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:175
+#: shared/inc/forms/subdomain.php:189
 msgid "Use register_globals=1: "
 msgstr ""
 
@@ -5325,11 +5337,11 @@ msgstr ""
 msgid "VAT Number: "
 msgstr ""
 
-#: admin/inc/renewals.php:424 admin/inc/renewals.php:578
+#: admin/inc/renewals.php:427 admin/inc/renewals.php:581
 msgid "VAT collected"
 msgstr ""
 
-#: admin/inc/renewals.php:461
+#: admin/inc/renewals.php:464
 msgid "VAT not found"
 msgstr ""
 
@@ -5354,7 +5366,7 @@ msgstr ""
 msgid "VM id: "
 msgstr ""
 
-#: admin/inc/renewals.php:704
+#: admin/inc/renewals.php:707
 msgid "VPS"
 msgstr ""
 
@@ -5412,7 +5424,7 @@ msgstr ""
 msgid "VPS renewal email reminders periodicity"
 msgstr ""
 
-#: admin/inc/renewals.php:696
+#: admin/inc/renewals.php:699
 msgid "VPS renewals:"
 msgstr ""
 
@@ -5424,7 +5436,7 @@ msgstr ""
 msgid "VPS xen number"
 msgstr ""
 
-#: admin/inc/renewals.php:566
+#: admin/inc/renewals.php:569
 msgid "VPS: "
 msgstr ""
 
@@ -5606,8 +5618,8 @@ msgstr ""
 #: shared/inc/forms/root_admin.php:57 shared/inc/forms/root_admin.php:67
 #: shared/inc/forms/root_admin.php:77 shared/inc/forms/root_admin.php:235
 #: shared/inc/forms/root_admin.php:353 shared/inc/forms/root_admin.php:358
-#: shared/inc/forms/subdomain.php:160 shared/inc/forms/subdomain.php:174
-#: shared/inc/forms/ticket.php:129
+#: shared/inc/forms/subdomain.php:133 shared/inc/forms/subdomain.php:174
+#: shared/inc/forms/subdomain.php:188 shared/inc/forms/ticket.php:129
 msgid "Yes"
 msgstr ""
 
@@ -5842,7 +5854,7 @@ msgstr ""
 msgid "Zimbabwe"
 msgstr ""
 
-#: admin/inc/renewals.php:356 shared/inc/forms/my_account.php:209
+#: admin/inc/renewals.php:359 shared/inc/forms/my_account.php:209
 msgid "Zipcode:"
 msgstr ""
 
@@ -5924,7 +5936,7 @@ msgstr ""
 msgid "is not same as the one I have in the database"
 msgstr ""
 
-#: shared/drawlib/dtc_functions.php:798
+#: shared/drawlib/dtc_functions.php:803
 msgid "kBytes"
 msgstr ""
 

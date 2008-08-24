@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.27.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-18 15:15+0800\n"
+"POT-Creation-Date: 2008-08-23 20:37+0800\n"
 "PO-Revision-Date: 2007-12-26 14:40+0800\n"
 "Last-Translator: Cynthia Yang <cynthia@mtiglobal.com>\n"
 "Language-Team: Chinese <zh_TW@li.org>\n"
@@ -46,6 +46,10 @@ msgstr ""
 #: shared/inc/sql/vps.php:202 shared/inc/sql/vps.php:212
 #: shared/inc/sql/vps.php:222
 msgid " file "
+msgstr ""
+
+#: shared/inc/forms/vps_installation.php:298
+msgid " maybe there are no logs yet?"
 msgstr ""
 
 #: shared/dtcrm/draw.php:79
@@ -223,12 +227,12 @@ msgstr ""
 msgid "Access not granted line "
 msgstr ""
 
-#: admin/inc/renewals.php:259
+#: admin/inc/renewals.php:262
 #, fuzzy
 msgid "Account name"
 msgstr "產品名稱"
 
-#: admin/inc/renewals.php:270
+#: admin/inc/renewals.php:273
 #, fuzzy
 msgid "Account number"
 msgstr "電話號碼: "
@@ -241,7 +245,7 @@ msgstr "針對以下的伺服器，以備份郵件伺服器來運作:"
 msgid "Act as backup mail server for the following servers:"
 msgstr "針對以下的伺服器，以備份郵件伺服器來運作:"
 
-#: admin/inc/renewals.php:425 admin/inc/renewals.php:709
+#: admin/inc/renewals.php:428 admin/inc/renewals.php:712
 #: admin/inc/draw_user_admin.php:246 admin/inc/draw_user_admin.php:304
 #: admin/inc/draw_user_admin.php:323 admin/dtcrm/main.php:217
 #: shared/inc/forms/database.php:37 shared/inc/forms/database.php:76
@@ -337,7 +341,7 @@ msgstr ""
 msgid "Address (line1): "
 msgstr "住址 (線路1): "
 
-#: admin/inc/renewals.php:347
+#: admin/inc/renewals.php:350
 #, fuzzy
 msgid "Address (line2):"
 msgstr "住址 (線路2): "
@@ -348,7 +352,7 @@ msgstr "住址 (線路2): "
 msgid "Address (line2): "
 msgstr "住址 (線路2): "
 
-#: admin/inc/renewals.php:350
+#: admin/inc/renewals.php:353
 #, fuzzy
 msgid "Address (line3):"
 msgstr "住址 (線路3): "
@@ -368,7 +372,7 @@ msgstr "地址:"
 msgid "Address of your main MX server:"
 msgstr "你主要 MX 伺服器的位址"
 
-#: admin/inc/renewals.php:344 admin/inc/dtc_config.php:1452
+#: admin/inc/renewals.php:347 admin/inc/dtc_config.php:1452
 #: shared/inc/forms/my_account.php:207
 msgid "Address:"
 msgstr "地址:"
@@ -455,7 +459,7 @@ msgstr ""
 msgid "American Samoa"
 msgstr ""
 
-#: admin/inc/renewals.php:578 shared/securepay/pay_functions.php:38
+#: admin/inc/renewals.php:581 shared/securepay/pay_functions.php:38
 msgid "Amount"
 msgstr "數量"
 
@@ -641,11 +645,11 @@ msgstr "註冊新的帳號"
 msgid "Bank accounts & payments"
 msgstr "無法找到款項"
 
-#: admin/inc/renewals.php:248
+#: admin/inc/renewals.php:251
 msgid "Bank accounts edition"
 msgstr ""
 
-#: admin/inc/renewals.php:277
+#: admin/inc/renewals.php:280
 #, fuzzy
 msgid "Bank address"
 msgstr "IP 位址"
@@ -749,7 +753,7 @@ msgstr ""
 msgid "Byelorussian SSR"
 msgstr ""
 
-#: shared/drawlib/dtc_functions.php:799
+#: shared/drawlib/dtc_functions.php:804
 #, fuzzy
 msgid "Bytes"
 msgstr "年"
@@ -933,7 +937,7 @@ msgstr ""
 msgid "Christmas Island"
 msgstr ""
 
-#: admin/inc/renewals.php:353 shared/inc/forms/my_account.php:210
+#: admin/inc/renewals.php:356 shared/inc/forms/my_account.php:210
 #, fuzzy
 msgid "City:"
 msgstr "城市: "
@@ -948,13 +952,13 @@ msgstr "城市: "
 msgid "Click"
 msgstr "按"
 
-#: admin/inc/renewals.php:422 admin/inc/renewals.php:639
-#: admin/inc/renewals.php:670 admin/inc/renewals.php:705
-#: admin/inc/renewals.php:785
+#: admin/inc/renewals.php:425 admin/inc/renewals.php:642
+#: admin/inc/renewals.php:673 admin/inc/renewals.php:708
+#: admin/inc/renewals.php:788
 msgid "Client"
 msgstr "客戶"
 
-#: admin/inc/renewals.php:422
+#: admin/inc/renewals.php:425
 #, fuzzy
 msgid "Client ID"
 msgstr "客戶"
@@ -964,7 +968,7 @@ msgstr "客戶"
 msgid "Client ID:"
 msgstr "客戶"
 
-#: admin/inc/renewals.php:423
+#: admin/inc/renewals.php:426
 #, fuzzy
 msgid "Client country"
 msgstr "服務國家"
@@ -979,8 +983,8 @@ msgstr "客戶資料"
 msgid "Client interface"
 msgstr "客戶資料"
 
-#: admin/inc/renewals.php:646 admin/inc/renewals.php:685
-#: admin/inc/renewals.php:726 admin/inc/renewals.php:800
+#: admin/inc/renewals.php:649 admin/inc/renewals.php:688
+#: admin/inc/renewals.php:729 admin/inc/renewals.php:803
 msgid "Client name not found!"
 msgstr "查無客戶名稱"
 
@@ -1018,7 +1022,7 @@ msgstr ""
 msgid "Companies"
 msgstr "公司"
 
-#: admin/inc/renewals.php:261
+#: admin/inc/renewals.php:264
 #, fuzzy
 msgid "Company"
 msgstr "公司"
@@ -1027,7 +1031,7 @@ msgstr "公司"
 msgid "Company name"
 msgstr "公司名稱"
 
-#: admin/inc/renewals.php:330 admin/inc/dtc_config.php:1447
+#: admin/inc/renewals.php:333 admin/inc/dtc_config.php:1447
 #: shared/inc/forms/my_account.php:202
 msgid "Company name:"
 msgstr "公司名稱:"
@@ -1145,6 +1149,10 @@ msgstr "無法在資料庫中找到 VPS 伺服器"
 msgid "Could not found subdomain in table for folder deletion"
 msgstr ""
 
+#: shared/inc/forms/vps_installation.php:298
+msgid "Could not get VPS install log. Error: "
+msgstr ""
+
 #: shared/inc/forms/vps_monitoring.php:126
 #: shared/inc/forms/vps_installation.php:73
 msgid ""
@@ -1188,7 +1196,7 @@ msgstr "縣市"
 msgid "Country code seems incorrect."
 msgstr "國碼似乎錯誤。"
 
-#: admin/inc/renewals.php:362 admin/inc/dtc_config.php:1455
+#: admin/inc/renewals.php:365 admin/inc/dtc_config.php:1455
 #: shared/inc/forms/my_account.php:212
 msgid "Country:"
 msgstr "國家:"
@@ -1222,7 +1230,7 @@ msgstr "註冊新網域"
 msgid "Create a new nick-handle:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:126
+#: shared/inc/forms/subdomain.php:140
 #, fuzzy
 msgid "Create a subdomain: "
 msgstr "註冊網域名稱"
@@ -1244,7 +1252,7 @@ msgstr ""
 msgid "Cuba"
 msgstr ""
 
-#: admin/inc/renewals.php:211 admin/inc/renewals.php:280
+#: admin/inc/renewals.php:211 admin/inc/renewals.php:283
 #, fuzzy
 msgid "Currency"
 msgstr "貨幣符號: "
@@ -1398,7 +1406,7 @@ msgstr "最多資料庫"
 msgid "Date"
 msgstr "日期"
 
-#: admin/inc/renewals.php:708
+#: admin/inc/renewals.php:711
 #, fuzzy
 msgid "Days of expiration"
 msgstr "期滿後的警告: "
@@ -1432,11 +1440,11 @@ msgstr "無期滿的獨立主機"
 msgid "Dedicated server hostname"
 msgstr "獨立主機"
 
-#: admin/inc/renewals.php:777
+#: admin/inc/renewals.php:780
 msgid "Dedicated servers renewals"
 msgstr "獨立主機更新"
 
-#: admin/inc/renewals.php:567
+#: admin/inc/renewals.php:570
 msgid "Dedicated servers: "
 msgstr "獨立主機"
 
@@ -1444,7 +1452,7 @@ msgstr "獨立主機"
 msgid "Default company invoicing:"
 msgstr "預設公司發票:"
 
-#: shared/inc/forms/subdomain.php:113
+#: shared/inc/forms/subdomain.php:116
 #, fuzzy
 msgid "Default subdomain: "
 msgstr "預設公司發票:"
@@ -1453,7 +1461,7 @@ msgstr "預設公司發票:"
 msgid "Defaut TTL for your zonefiles:"
 msgstr ""
 
-#: admin/inc/renewals.php:476 admin/inc/draw_user_admin.php:290
+#: admin/inc/renewals.php:479 admin/inc/draw_user_admin.php:290
 #: admin/inc/draw_user_admin.php:310 shared/inc/forms/database.php:53
 #: shared/inc/forms/database.php:99 shared/inc/forms/domain_stats.php:104
 msgid "Delete"
@@ -1676,12 +1684,12 @@ msgstr "網域名稱"
 msgid "Dominican Republic"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:245
+#: shared/inc/forms/subdomain.php:259
 #, fuzzy
 msgid "Dynamic IP update login: "
 msgstr "Maxmind 登入: "
 
-#: shared/inc/forms/subdomain.php:251
+#: shared/inc/forms/subdomain.php:265
 msgid "Dynamic IP update password: "
 msgstr ""
 
@@ -1724,7 +1732,7 @@ msgstr ""
 msgid "Edit mailing lists of domain:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:128
+#: shared/inc/forms/subdomain.php:142
 #, fuzzy
 msgid "Edit one of your subdomains"
 msgstr "你的公司列表:"
@@ -1741,8 +1749,8 @@ msgstr ""
 msgid "El Salvador"
 msgstr ""
 
-#: admin/inc/renewals.php:639 admin/inc/renewals.php:670
-#: admin/inc/renewals.php:706 admin/inc/renewals.php:785
+#: admin/inc/renewals.php:642 admin/inc/renewals.php:673
+#: admin/inc/renewals.php:709 admin/inc/renewals.php:788
 msgid "Email"
 msgstr "電子郵件"
 
@@ -1778,7 +1786,7 @@ msgstr "電子郵件: "
 msgid "Email user and domain files generated !"
 msgstr "已產生電子郵件使用者與網域檔案 !"
 
-#: admin/inc/renewals.php:371 shared/inc/forms/aliases.php:48
+#: admin/inc/renewals.php:374 shared/inc/forms/aliases.php:48
 #: shared/inc/forms/my_account.php:215
 #, fuzzy
 msgid "Email:"
@@ -1856,8 +1864,8 @@ msgstr ""
 msgid "Expiration"
 msgstr "期滿日期"
 
-#: admin/inc/renewals.php:639 admin/inc/renewals.php:670
-#: admin/inc/renewals.php:707 admin/inc/renewals.php:785
+#: admin/inc/renewals.php:642 admin/inc/renewals.php:673
+#: admin/inc/renewals.php:710 admin/inc/renewals.php:788
 msgid "Expiration date"
 msgstr "期滿日期"
 
@@ -1917,7 +1925,7 @@ msgstr "FTP密碼"
 msgid "Falkland Islands (Malvinas)"
 msgstr ""
 
-#: admin/inc/renewals.php:341
+#: admin/inc/renewals.php:344
 #, fuzzy
 msgid "Familly name:"
 msgstr "姓氏: "
@@ -1937,7 +1945,7 @@ msgstr "姓氏: "
 msgid "Faroe Islands"
 msgstr ""
 
-#: admin/inc/renewals.php:368 shared/inc/forms/my_account.php:214
+#: admin/inc/renewals.php:371 shared/inc/forms/my_account.php:214
 #, fuzzy
 msgid "Fax:"
 msgstr "傳真: "
@@ -1974,7 +1982,7 @@ msgstr ""
 msgid "Finland"
 msgstr ""
 
-#: admin/inc/renewals.php:338 shared/inc/forms/my_account.php:205
+#: admin/inc/renewals.php:341 shared/inc/forms/my_account.php:205
 #, fuzzy
 msgid "First name:"
 msgstr "名: "
@@ -2021,7 +2029,7 @@ msgstr "完整的"
 msgid "Full path to location of the public.key file for DomainKey support:"
 msgstr ""
 
-#: shared/drawlib/dtc_functions.php:796
+#: shared/drawlib/dtc_functions.php:801
 msgid "GBytes"
 msgstr ""
 
@@ -2045,7 +2053,7 @@ msgstr "一般"
 msgid "General information of "
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:161
+#: shared/inc/forms/subdomain.php:175
 msgid "Generate a vhost entry for this subdomain:"
 msgstr ""
 
@@ -2146,11 +2154,11 @@ msgstr ""
 msgid "Haiti"
 msgstr ""
 
-#: admin/inc/renewals.php:752
+#: admin/inc/renewals.php:755
 msgid "Has a dedicated"
 msgstr ""
 
-#: admin/inc/renewals.php:749
+#: admin/inc/renewals.php:752
 #, fuzzy
 msgid "Has some domains"
 msgstr "增加網域"
@@ -2274,7 +2282,7 @@ msgstr "伺服器主要ip位址: "
 msgid "IP address of the primary DNS server:"
 msgstr "伺服器主要ip位址: "
 
-#: shared/inc/forms/subdomain.php:156
+#: shared/inc/forms/subdomain.php:170
 #, fuzzy
 msgid "IP address or CNAME: "
 msgstr "IP 位址"
@@ -2402,7 +2410,7 @@ msgid ""
 "Return-Path: are deleted no matter what."
 msgstr ""
 
-#: admin/inc/submit_root_querys.php:270
+#: admin/inc/submit_root_querys.php:274
 msgid ""
 "Incorect admin login format: it should consist of only lowercase letters or "
 "numbers or the \"-\" sign, and should be between 4 and 16 chars long.<br>\n"
@@ -2542,7 +2550,7 @@ msgstr ""
 msgid "Is company radio button is wrong!"
 msgstr ""
 
-#: admin/inc/renewals.php:336
+#: admin/inc/renewals.php:339
 #, fuzzy
 msgid "Is it a company:"
 msgstr "這是一個公司嗎: "
@@ -2595,7 +2603,7 @@ msgstr ""
 msgid "Kenya"
 msgstr ""
 
-#: admin/inc/renewals.php:747
+#: admin/inc/renewals.php:750
 msgid "Kill VPS and owner"
 msgstr ""
 
@@ -2751,7 +2759,7 @@ msgstr "你的公司列表:"
 msgid "List of your registred name-servers:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:125
+#: shared/inc/forms/subdomain.php:139
 #, fuzzy
 msgid "List of your subdomains: "
 msgstr "你的公司列表:"
@@ -2804,8 +2812,8 @@ msgstr ""
 msgid "Location of user's database: "
 msgstr "使用者資料庫地點"
 
-#: admin/inc/renewals.php:639 admin/inc/renewals.php:670
-#: admin/inc/renewals.php:704 admin/inc/renewals.php:785
+#: admin/inc/renewals.php:642 admin/inc/renewals.php:673
+#: admin/inc/renewals.php:707 admin/inc/renewals.php:788
 #: admin/inc/draw_user_admin.php:246 admin/inc/draw_user_admin.php:304
 #: admin/inc/draw_user_admin.php:323 admin/inc/draw_user_admin.php:409
 #: admin/inc/dtc_config.php:340 admin/inc/dtc_config.php:959
@@ -2851,7 +2859,7 @@ msgstr ""
 msgid "Luxembourg"
 msgstr ""
 
-#: shared/drawlib/dtc_functions.php:797 shared/inc/forms/email.php:587
+#: shared/drawlib/dtc_functions.php:802 shared/inc/forms/email.php:587
 #: shared/inc/forms/email.php:594
 msgid "MBytes"
 msgstr ""
@@ -3115,11 +3123,11 @@ msgstr "每月"
 msgid "Montserrat"
 msgstr ""
 
-#: admin/inc/renewals.php:755
+#: admin/inc/renewals.php:758
 msgid "More than one VPS"
 msgstr ""
 
-#: admin/inc/renewals.php:758
+#: admin/inc/renewals.php:761
 #, fuzzy
 msgid "More than one login"
 msgstr "到登入"
@@ -3165,8 +3173,8 @@ msgstr ""
 msgid "Myanmar"
 msgstr ""
 
-#: admin/inc/renewals.php:436 admin/inc/renewals.php:437
-#: admin/inc/renewals.php:438
+#: admin/inc/renewals.php:439 admin/inc/renewals.php:440
+#: admin/inc/renewals.php:441
 msgid "N/A"
 msgstr ""
 
@@ -3342,7 +3350,7 @@ msgstr "FTP密碼"
 msgid "New service registered successfully!"
 msgstr "註冊成功!"
 
-#: shared/inc/forms/subdomain.php:127
+#: shared/inc/forms/subdomain.php:141
 #, fuzzy
 msgid "New subdomain"
 msgstr "增加網域"
@@ -3398,12 +3406,12 @@ msgstr ""
 #: shared/inc/forms/root_admin.php:58 shared/inc/forms/root_admin.php:68
 #: shared/inc/forms/root_admin.php:78 shared/inc/forms/root_admin.php:236
 #: shared/inc/forms/root_admin.php:353 shared/inc/forms/root_admin.php:358
-#: shared/inc/forms/subdomain.php:160 shared/inc/forms/subdomain.php:174
-#: shared/inc/forms/ticket.php:130
+#: shared/inc/forms/subdomain.php:133 shared/inc/forms/subdomain.php:174
+#: shared/inc/forms/subdomain.php:188 shared/inc/forms/ticket.php:130
 msgid "No"
 msgstr "No"
 
-#: admin/inc/renewals.php:667
+#: admin/inc/renewals.php:670
 msgid "No SSL IP expired"
 msgstr "無期滿的SSL IP"
 
@@ -3411,7 +3419,7 @@ msgstr "無期滿的SSL IP"
 msgid "No SSL token available: contact your administrator to request it."
 msgstr ""
 
-#: admin/inc/renewals.php:701
+#: admin/inc/renewals.php:704
 msgid "No VPS expired"
 msgstr "無期滿的VPS"
 
@@ -3423,7 +3431,7 @@ msgstr ""
 msgid "No catch-all"
 msgstr ""
 
-#: admin/inc/renewals.php:429 admin/inc/renewals.php:430
+#: admin/inc/renewals.php:432 admin/inc/renewals.php:433
 #, fuzzy
 msgid "No client id"
 msgstr "客戶資料"
@@ -3432,7 +3440,7 @@ msgstr "客戶資料"
 msgid "No completed orders found."
 msgstr ""
 
-#: admin/inc/renewals.php:782
+#: admin/inc/renewals.php:785
 msgid "No dedicated server expired"
 msgstr "無期滿的獨立主機"
 
@@ -3448,7 +3456,7 @@ msgstr ""
 msgid "No parking"
 msgstr ""
 
-#: admin/inc/renewals.php:419
+#: admin/inc/renewals.php:422
 msgid "No past payments for this period"
 msgstr ""
 
@@ -3469,7 +3477,7 @@ msgstr "無等待支援標籤!"
 msgid "No product"
 msgstr "產品"
 
-#: admin/inc/renewals.php:636
+#: admin/inc/renewals.php:639
 msgid "No shared account expired."
 msgstr "無期滿的共享帳號."
 
@@ -3513,7 +3521,7 @@ msgstr "找不到形式"
 msgid "Not registering"
 msgstr "沒有進行註冊"
 
-#: admin/inc/renewals.php:374
+#: admin/inc/renewals.php:377
 #, fuzzy
 msgid "Note:"
 msgstr "備註: "
@@ -3569,7 +3577,7 @@ msgstr ""
 msgid "Number of active ssh accounts:"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:135
+#: shared/inc/forms/subdomain.php:149
 msgid "Number of active subdomains:"
 msgstr ""
 
@@ -3711,7 +3719,7 @@ msgstr ""
 msgid "Password"
 msgstr "密碼"
 
-#: admin/inc/submit_root_querys.php:274
+#: admin/inc/submit_root_querys.php:278
 msgid ""
 "Password consist of only letters and numbers (a-zA-Z0-9) and should be "
 "between 6 and 16 chars long.<br>\n"
@@ -3808,7 +3816,7 @@ msgstr ""
 msgid "PayPal test account email (sandbox): "
 msgstr ""
 
-#: admin/inc/renewals.php:413
+#: admin/inc/renewals.php:416
 msgid "Payements for the period: "
 msgstr ""
 
@@ -3816,7 +3824,7 @@ msgstr ""
 msgid "Payment complete. Proceed to checkout"
 msgstr "付款完成。離開"
 
-#: admin/inc/renewals.php:229 admin/inc/renewals.php:424
+#: admin/inc/renewals.php:229 admin/inc/renewals.php:427
 #: admin/inc/draw_user_admin.php:323
 msgid "Payment date"
 msgstr "付款日期"
@@ -3825,12 +3833,12 @@ msgstr "付款日期"
 msgid "Payment gateway"
 msgstr ""
 
-#: admin/inc/renewals.php:578 shared/inc/forms/invoices.php:23
+#: admin/inc/renewals.php:581 shared/inc/forms/invoices.php:23
 #, fuzzy
 msgid "Payment gateway cost"
 msgstr "付款日期"
 
-#: admin/inc/renewals.php:460
+#: admin/inc/renewals.php:463
 #, fuzzy
 msgid "Payment not found"
 msgstr "找不到形式"
@@ -3840,7 +3848,7 @@ msgstr "找不到形式"
 msgid "Payment system"
 msgstr "付款日期"
 
-#: admin/inc/renewals.php:289
+#: admin/inc/renewals.php:292
 #, fuzzy
 msgid "Payment type edition"
 msgstr "找不到形式"
@@ -3854,7 +3862,7 @@ msgstr ""
 msgid "Pending"
 msgstr "等待"
 
-#: admin/inc/renewals.php:424 admin/inc/renewals.php:578
+#: admin/inc/renewals.php:427 admin/inc/renewals.php:581
 #: admin/dtcrm/product_manager.php:36 admin/dtcrm/product_manager.php:109
 #: admin/dtcrm/product_manager.php:172 admin/dtcrm/product_manager.php:235
 #: shared/dtcrm/draw.php:87
@@ -3881,7 +3889,7 @@ msgstr "電話號碼: "
 msgid "Phone number: "
 msgstr "電話號碼: "
 
-#: admin/inc/renewals.php:365
+#: admin/inc/renewals.php:368
 #, fuzzy
 msgid "Phone:"
 msgstr "電話號碼: "
@@ -3998,7 +4006,7 @@ msgstr "進行名稱註冊"
 msgid "Proceed to transfer"
 msgstr "進行名稱註冊"
 
-#: admin/inc/renewals.php:422 admin/inc/draw_user_admin.php:246
+#: admin/inc/renewals.php:425 admin/inc/draw_user_admin.php:246
 #: admin/inc/draw_user_admin.php:323 client/new_account_form.php:542
 #: shared/dtcrm/draw.php:86 shared/inc/forms/invoices.php:23
 #: shared/inc/forms/root_admin.php:566
@@ -4028,7 +4036,7 @@ msgstr "產品列表編輯"
 msgid "Product name"
 msgstr "產品名稱"
 
-#: admin/inc/renewals.php:450
+#: admin/inc/renewals.php:453
 #, fuzzy
 msgid "Product not found"
 msgstr "在資料庫中找不到產品"
@@ -4055,7 +4063,7 @@ msgstr "產品: "
 msgid "Production server"
 msgstr "生產伺服器"
 
-#: admin/inc/renewals.php:578
+#: admin/inc/renewals.php:581
 #, fuzzy
 msgid "Profit"
 msgstr "私人的"
@@ -4388,11 +4396,11 @@ msgstr "VPS: "
 msgid "SSL IP addresses"
 msgstr "SSL IP位址"
 
-#: admin/inc/renewals.php:662
+#: admin/inc/renewals.php:665
 msgid "SSL IPs renewals"
 msgstr "SSL IP更新"
 
-#: admin/inc/renewals.php:565
+#: admin/inc/renewals.php:568
 msgid "SSL IPs renewals: "
 msgstr "SSL IP更新"
 
@@ -4417,7 +4425,7 @@ msgstr "SSL獨立IP位址: "
 msgid "SSL tokens"
 msgstr "SSL憑證購買"
 
-#: admin/inc/renewals.php:273
+#: admin/inc/renewals.php:276
 msgid "SWIFT"
 msgstr ""
 
@@ -4467,7 +4475,7 @@ msgstr ""
 msgid "Save"
 msgstr "伺服器主機"
 
-#: shared/inc/forms/subdomain.php:196
+#: shared/inc/forms/subdomain.php:210
 msgid "Sbox cgi-bin protection: "
 msgstr ""
 
@@ -4535,7 +4543,7 @@ msgstr "一般"
 msgid "Serbia"
 msgstr ""
 
-#: admin/inc/renewals.php:785
+#: admin/inc/renewals.php:788
 msgid "Server"
 msgstr "伺服器主機"
 
@@ -4602,7 +4610,7 @@ msgstr "伺服器說: "
 msgid "Server:"
 msgstr "伺服器:"
 
-#: admin/inc/renewals.php:422 admin/inc/dtc_config.php:1539
+#: admin/inc/renewals.php:425 admin/inc/dtc_config.php:1539
 msgid "Service country"
 msgstr "服務國家"
 
@@ -4623,15 +4631,15 @@ msgstr ""
 msgid "Shared"
 msgstr "共享的"
 
-#: admin/inc/renewals.php:631
+#: admin/inc/renewals.php:634
 msgid "Shared hosting renewals:"
 msgstr "共享虛擬主機更新"
 
-#: admin/inc/renewals.php:564
+#: admin/inc/renewals.php:567
 msgid "Shared hosting: "
 msgstr "共享虛擬主機"
 
-#: admin/inc/renewals.php:328
+#: admin/inc/renewals.php:331
 #, fuzzy
 msgid "Short name:"
 msgstr "簡短名稱: "
@@ -4640,7 +4648,7 @@ msgstr "簡短名稱: "
 msgid "Short name: "
 msgstr "簡短名稱: "
 
-#: admin/inc/renewals.php:771
+#: admin/inc/renewals.php:774
 #, fuzzy
 msgid "Shutdown"
 msgstr "關機警告: "
@@ -4677,7 +4685,7 @@ msgstr ""
 msgid "Sorry, the domain name "
 msgstr "抱歉，這個網域名稱 "
 
-#: admin/inc/renewals.php:266
+#: admin/inc/renewals.php:269
 #, fuzzy
 msgid "Sort code"
 msgstr "支援標籤"
@@ -4706,7 +4714,7 @@ msgstr ""
 msgid "Stat script generated !"
 msgstr ""
 
-#: admin/inc/renewals.php:359 shared/inc/forms/my_account.php:211
+#: admin/inc/renewals.php:362 shared/inc/forms/my_account.php:211
 #, fuzzy
 msgid "State:"
 msgstr "州: "
@@ -4787,7 +4795,7 @@ msgstr ""
 msgid "Subdomain max"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:150
+#: shared/inc/forms/subdomain.php:164
 #, fuzzy
 msgid "Subdomain name: "
 msgstr "網域名稱"
@@ -4905,7 +4913,7 @@ msgstr ""
 msgid "TRANSFER CHECK SUCCESSFUL"
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:178
+#: shared/inc/forms/subdomain.php:192
 msgid "TXT field of the subdomain: "
 msgstr ""
 
@@ -5092,12 +5100,12 @@ msgstr ""
 msgid "This server location: "
 msgstr "此伺服器定位: "
 
-#: shared/inc/forms/subdomain.php:183
+#: shared/inc/forms/subdomain.php:197
 msgid ""
 "This subdomain is a nameserver (NS)<br>entry for the following subdomain: "
 msgstr ""
 
-#: shared/inc/forms/subdomain.php:169
+#: shared/inc/forms/subdomain.php:183
 msgid "This subdomain is a service (SRV)<br>entry for the following port: "
 msgstr ""
 
@@ -5167,7 +5175,7 @@ msgstr ""
 msgid "Tonga"
 msgstr ""
 
-#: admin/inc/renewals.php:424 shared/securepay/pay_functions.php:38
+#: admin/inc/renewals.php:427 shared/securepay/pay_functions.php:38
 #, fuzzy
 msgid "Total"
 msgstr "總計: "
@@ -5197,7 +5205,7 @@ msgstr "硬碟使用"
 msgid "Total price: "
 msgstr "總額: "
 
-#: admin/inc/renewals.php:484
+#: admin/inc/renewals.php:487
 msgid "Total recurring incomes per month:"
 msgstr ""
 
@@ -5221,7 +5229,7 @@ msgstr "本月伺服器轉換: "
 msgid "Total transfered bytes this month:"
 msgstr "本月伺服器轉換: "
 
-#: admin/inc/renewals.php:569
+#: admin/inc/renewals.php:572
 msgid "Total: "
 msgstr "總計: "
 
@@ -5293,7 +5301,7 @@ msgstr "找不到形式"
 msgid "Type of encryption for connecting to Tucows server:"
 msgstr ""
 
-#: admin/inc/renewals.php:299
+#: admin/inc/renewals.php:302
 msgid "Type of payment"
 msgstr ""
 
@@ -5377,7 +5385,7 @@ msgstr ""
 msgid "Upstream provider editor"
 msgstr ""
 
-#: admin/inc/renewals.php:308
+#: admin/inc/renewals.php:311
 msgid "Upstream provider list edition"
 msgstr ""
 
@@ -5419,8 +5427,12 @@ msgstr "使用SSL: "
 msgid "Use WebMoney: "
 msgstr "使用webalizer"
 
-#: shared/inc/forms/subdomain.php:232
+#: shared/inc/forms/subdomain.php:246
 msgid "Use an SSL vhost using this IP: "
+msgstr ""
+
+#: shared/inc/forms/subdomain.php:133
+msgid "Use as wildcard for the domain:"
 msgstr ""
 
 #: admin/inc/dtc_config.php:778
@@ -5456,7 +5468,7 @@ msgstr ""
 msgid "Use paypal: "
 msgstr "使用 paypal: "
 
-#: shared/inc/forms/subdomain.php:175
+#: shared/inc/forms/subdomain.php:189
 #, fuzzy
 msgid "Use register_globals=1: "
 msgstr "使用API登錄"
@@ -5563,11 +5575,11 @@ msgstr ""
 msgid "VAT Number: "
 msgstr "稅籍號碼: "
 
-#: admin/inc/renewals.php:424 admin/inc/renewals.php:578
+#: admin/inc/renewals.php:427 admin/inc/renewals.php:581
 msgid "VAT collected"
 msgstr ""
 
-#: admin/inc/renewals.php:461
+#: admin/inc/renewals.php:464
 #, fuzzy
 msgid "VAT not found"
 msgstr "找不到形式"
@@ -5594,7 +5606,7 @@ msgstr "VPS: "
 msgid "VM id: "
 msgstr ""
 
-#: admin/inc/renewals.php:704
+#: admin/inc/renewals.php:707
 msgid "VPS"
 msgstr "VPS"
 
@@ -5656,7 +5668,7 @@ msgstr ""
 msgid "VPS renewal email reminders periodicity"
 msgstr "VPS定期更新電子郵件提示"
 
-#: admin/inc/renewals.php:696
+#: admin/inc/renewals.php:699
 msgid "VPS renewals:"
 msgstr "VPS更新"
 
@@ -5668,7 +5680,7 @@ msgstr "VPS伺服器"
 msgid "VPS xen number"
 msgstr ""
 
-#: admin/inc/renewals.php:566
+#: admin/inc/renewals.php:569
 msgid "VPS: "
 msgstr "VPS: "
 
@@ -5854,8 +5866,8 @@ msgstr ""
 #: shared/inc/forms/root_admin.php:57 shared/inc/forms/root_admin.php:67
 #: shared/inc/forms/root_admin.php:77 shared/inc/forms/root_admin.php:235
 #: shared/inc/forms/root_admin.php:353 shared/inc/forms/root_admin.php:358
-#: shared/inc/forms/subdomain.php:160 shared/inc/forms/subdomain.php:174
-#: shared/inc/forms/ticket.php:129
+#: shared/inc/forms/subdomain.php:133 shared/inc/forms/subdomain.php:174
+#: shared/inc/forms/subdomain.php:188 shared/inc/forms/ticket.php:129
 msgid "Yes"
 msgstr "Yes"
 
@@ -6103,7 +6115,7 @@ msgstr ""
 msgid "Zimbabwe"
 msgstr ""
 
-#: admin/inc/renewals.php:356 shared/inc/forms/my_account.php:209
+#: admin/inc/renewals.php:359 shared/inc/forms/my_account.php:209
 #, fuzzy
 msgid "Zipcode:"
 msgstr "郵遞區號: "
@@ -6186,7 +6198,7 @@ msgstr "目前無法提供註冊。The registration server returned:"
 msgid "is not same as the one I have in the database"
 msgstr "與資料庫中資訊不符"
 
-#: shared/drawlib/dtc_functions.php:798
+#: shared/drawlib/dtc_functions.php:803
 msgid "kBytes"
 msgstr ""
 
