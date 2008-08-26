@@ -7,6 +7,7 @@ dtc (0.29.10-1) unstable; urgency=low
     - the CPU rrd data collection (the rrd call was commented out)
     - the setup of the default index.php & 404 subdomain files
     - sa-wrapper symlink attack vulnerability fix (Closes: #496362)
+    - removed the paylog.txt logging
     - [v0.29.8] phpmyadmin blowfish_secret owner change
     - [v0.29.8] Cleaning the spam folder with -mtime instead of -atime
     - [v0.29.8] Added a full Simplified Chinese translation by Wei Cao
