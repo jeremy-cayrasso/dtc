@@ -1,15 +1,34 @@
-dtc (0.29.9-1) unstable; urgency=low
+dtc (0.29.10-1) unstable; urgency=low
 
-  * New upstream release with 2 small bugs corrections concerning the CPU rrd
-    data collection (the rrd call was commented out) and concerning the setup
-    of the default index.php & 404 subdomain files.
-
- -- Thomas Goirand <thomas@goirand.fr>  Mon, 25 Aug 2008 16:13:35 +0800
+  * New upstream release with corrections for Lenny, backported from the master
+    branch of the Git, to add corrections and not features as follow:
+    - Big problem with the pending payment thing that was setting things as
+    validated when they were in fact just pending.
+    - the CPU rrd data collection (the rrd call was commented out)
+    - the setup of the default index.php & 404 subdomain files
+    - sa-wrapper symlink attack vulnerability fix (Closes: #496362)
+    - [v0.29.8] phpmyadmin blowfish_secret owner change
+    - [v0.29.8] Cleaning the spam folder with -mtime instead of -atime
+    - [v0.29.8] Added a full Simplified Chinese translation by Wei Cao
+    <caowei@gplhost.com>, including debconf and the software itself
+    - [v0.29.8] Removed the "limit 1" when setting the id_client to zero
+    when deleting an admin.
+    - [v0.29.8] Solved the mysql users & db deletion bug when deleting an
+    admin, removed the old mysql manager code that was remaining.
+    - [v0.29.8] Needed a global $pro_mysql_pop_table in the spam folder
+    cleanup
+    - [v0.29.8] Removed a bug when there is no install log at all that was
+    preventing the VPS install tab to be displayed
+    - [v0.29.8] Some global variables for the vps table names where missing
+    in deleteVPS()
+    - [v0.29.8] The cron job needed to be modified for gen_named='yes',
+    reload_named='yes' when modifying the wildcard DNS thing.
+    - [v0.29.8] A Tags: was still there in debian/control, it's now removed.
 
 dtc (0.29.8-1) unstable; urgency=low
 
-  * New upstream release with corrections for Lenny, backported from the master
-    branch of the Git, to add corrections and not features.
+    * New upstream release with corrections for Lenny, backported from the master
+      branch of the Git, to add corrections and not features.
 
  -- Thomas Goirand <thomas@goirand.fr>  Wed, 20 Aug 2008 05:07:11 +0800
 
