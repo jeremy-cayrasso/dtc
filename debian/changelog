@@ -1,3 +1,16 @@
+dtc (0.29.11-1) unstable; urgency=low
+
+  * New upstream release with corrections for Lenny, backported from the master
+    branch of the Git, to add corrections and not features as follow:
+    - Modify depends: so it uses proftpd-mod-mysql as this is the new package
+    for proftpd...
+    - Solved the INSERT bug for the Money spent accounting functions.
+    - Now the add domain or service link is ALWAYS showed.
+    - Fixed a bug if adding a new service with a non-debian VPS.
+    - Removed list.dsbl.org from default DNSBL as it's dead.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Fri, 17 Oct 2008 12:21:49 +0800
+
 dtc (0.29.10-1) unstable; urgency=low
 
   * New upstream release with corrections for Lenny, backported from the master
