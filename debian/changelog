@@ -8,9 +8,9 @@ dtc (0.29.13-1) unstable; urgency=low
     - Now the add domain or service link is ALWAYS showed.
     - Fixed a bug if adding a new service with a non-debian VPS.
     - Removed list.dsbl.org from default DNSBL as it's dead.
-  * Added a lintian override, as Lintian thinks there's no phpX-depends, when
-    in fact, there is a php5-cli | php4-cli that is there to facilitate
-    backports to Etch.
+  * Removed all trace of php4 dependency, leaving only dependency to php5. This
+    is needed as lintian doesn't see "php5-cli | php4-cli" and yell that
+    phpX-cli is missing.
 
  -- Thomas Goirand <thomas@goirand.fr>  Fri, 17 Oct 2008 12:21:49 +0800
 

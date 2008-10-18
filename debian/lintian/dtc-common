@@ -1,2 +1,1 @@
 dtc-common: package-contains-empty-directory usr/share/dtc/shared/imgcache/
-dtc-common: php-script-but-no-phpX-cli-dep ./usr/share/dtc/admin/accesslog.php
