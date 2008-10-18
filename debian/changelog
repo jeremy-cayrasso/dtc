@@ -11,6 +11,7 @@ dtc (0.29.13-1) unstable; urgency=low
   * Removed all trace of php4 dependency, leaving only dependency to php5. This
     is needed as lintian doesn't see "php5-cli | php4-cli" and yell that
     phpX-cli is missing.
+  * Removed unused debconf template.
 
  -- Thomas Goirand <thomas@goirand.fr>  Fri, 17 Oct 2008 12:21:49 +0800
 
