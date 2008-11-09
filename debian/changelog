@@ -1,3 +1,12 @@
+dtc (0.29.15-1) unstable; urgency=low
+
+  * Move the dependency of amavisd-new and clamav from dtc-common to
+    dtc-postfix-courier and dtc-cyrus, so dtc-core can be setup without it.
+  * Removed double dependency to patch.
+  * Removed dependency to bind, now only depends on bind9.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Mon, 10 Nov 2008 03:57:19 +0800
+
 dtc (0.29.14-1) unstable; urgency=low
 
   * New upstream release with corrections for Lenny, backported from the master
