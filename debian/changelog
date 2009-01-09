@@ -1,3 +1,10 @@
+dtc (0.29.16-1) unstable; urgency=low
+
+  * New spanish debian template translation thanks to Francisco Javier Cuadrado
+    <fcocuadrado@gmail.com> (Closes: #510468)
+
+ -- Thomas Goirand <thomas@goirand.fr>  Sat, 10 Jan 2009 04:20:01 +0800
+
 dtc (0.29.15-1) unstable; urgency=low
 
   * Move the dependency of amavisd-new and clamav from dtc-common to
