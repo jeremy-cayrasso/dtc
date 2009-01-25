@@ -2,6 +2,10 @@ dtc (0.29.16-1) unstable; urgency=low
 
   * New spanish debian template translation thanks to Francisco Javier Cuadrado
     <fcocuadrado@gmail.com> (Closes: #510468)
+  * Backported a MySQL insertion security fix from the Git version (issue was
+    when using the add service function once you already have an account).
+  * Fixed the roundcube dependency so it pulls it correctly.
+  * Backported a bugfix for the VAT rate so it can be changed without issue.
 
  -- Thomas Goirand <thomas@goirand.fr>  Sat, 10 Jan 2009 04:20:01 +0800
 
