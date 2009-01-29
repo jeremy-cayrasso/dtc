@@ -1,3 +1,11 @@
+dtc (0.29.17-1) unstable; urgency=high
+
+  * The last debian package was wrongly packaged with a version older than
+    the 0.29.16 because of some Git mistake (forgot to push before I did the
+    clone to build the package). This corrects it.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Thu, 29 Jan 2009 23:43:30 +0800
+
 dtc (0.29.16-1) unstable; urgency=low
 
   * New spanish debian template translation thanks to Francisco Javier Cuadrado
