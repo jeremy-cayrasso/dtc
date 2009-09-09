@@ -1,3 +1,10 @@
+dtc (0.30.7-2) unstable; urgency=low
+
+  * New upstream release fixing the following:
+    - [v0.30.7] gen_named_files.php for the automated hostnames now works.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Thu, 10 Sep 2009 03:18:35 +0800
+
 dtc (0.30.6-1) unstable; urgency=low
 
   * New upstream release.
