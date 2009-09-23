@@ -1,4 +1,4 @@
-dtc (0.30.8-1) unstable; urgency=low
+dtc (0.30.8-1) unstable; urgency=high
 
   * New upstream release fixing the following:
     - gen_named_files.php for the automated hostnames now works.
