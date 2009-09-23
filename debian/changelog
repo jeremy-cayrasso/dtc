@@ -1,7 +1,16 @@
-dtc (0.30.7-2) unstable; urgency=low
+dtc (0.30.8-1) unstable; urgency=low
 
   * New upstream release fixing the following:
-    - [v0.30.7] gen_named_files.php for the automated hostnames now works.
+    - gen_named_files.php for the automated hostnames now works.
+    - fixed bad printing of mailboxes (re)creation
+    - fixed an bug when generating the fetchmail script
+    - fixed the monitor.php when a customer has multiple admins
+    - dtc_see_password also works in IE
+    - corrected the cron for the wrong nagios variables
+    - logrotate script didn't have an endscript statement
+    - corrected the the call to updateUsingCron() in the sql/vps.php
+    - fixed the dom0 and VPS automatic VPS hostname creation
+    - added missing MySQL privileges
 
  -- Thomas Goirand <thomas@goirand.fr>  Thu, 10 Sep 2009 03:18:35 +0800
 
