@@ -1,5 +1,5 @@
 Name: dtc-core
-Version: 0.30.4
+Version: 0.30.8
 Release: 0.4.20090831.2
 License: LGPL
 Group: System Environment/Daemons
