@@ -523,6 +523,7 @@ function nodes_vps_generate(){
 
 	$nodes_named_conf = "";
 
+	$all_ip = "";
 	if(strlen($conf_ip_allowed_dns_transfer) > 4){
 		$more_allowed = explode("|",$conf_ip_allowed_dns_transfer);
 		$v = sizeof($more_allowed);
