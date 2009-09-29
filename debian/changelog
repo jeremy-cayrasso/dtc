@@ -1,12 +1,16 @@
-dtc (0.30.9-1) unstable; urgency=low
+dtc (0.30.10-1) unstable; urgency=low
 
   * New upstream release fixing the following:
     - Removed the "array, cannot fetch admin" in the /dtcadmin interface.
     - Removed a Notice warning when generating the named config files and no
     VPS is present in the db.
     - Reverted the dtc_see_password patch for IE as it's not working.
+    - Fixed the entries in the DNS for the default IN A pointers to VPSes.
+    - nodes_zones.conf generated correctly.
+  * Bumped Standards-Version to 3.8.3.
+  * Added registration of the DTC doc in doc-base
 
- -- Thomas Goirand <thomas@goirand.fr>  Mon, 28 Sep 2009 18:27:58 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Tue, 29 Sep 2009 16:53:18 +0800
 
 dtc (0.30.8-1) unstable; urgency=high
 
