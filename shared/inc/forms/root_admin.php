@@ -36,7 +36,8 @@ function drawEditAdmin($admin){
 	$ssh_login_flag = $info["ssh_login_flag"];
 	$ftp_login_flag = $info["ftp_login_flag"];
 	$pkg_install_flag = $info["pkg_install_flag"];
-
+    $g_install_flag = $info["g_install_flag"];
+	
 	if($resseller_flag == "yes"){
 		$resflag_yes = " checked='checked' ";
 		$resflag_no = "";
@@ -76,6 +77,16 @@ function drawEditAdmin($admin){
 	}
 	$pkg_install_selector = "<input type=\"radio\" name=\"pkg_install_flag\" value=\"yes\"$pkg_install_yes> "._("Yes")."
 	<input type=\"radio\" name=\"pkg_install_flag\" value=\"no\"$pkg_install_no> "._("No");
+
+    if($g_install_flag == "yes"){
+		$g_install_yes = " checked='checked' ";
+		$g_install_no = "";
+	}else{
+		$g_install_yes = "";
+		$g_install_no = " checked='checked' ";
+	}
+	$g_install_selector = "<input type=\"radio\" name=\"g_install_flag\" value=\"yes\"$g_install_yes> "._("Yes")."
+	<input type=\"radio\" name=\"g_install_flag\" value=\"no\"$g_install_no> "._("No");
 
 	if($allow_add_domain == "yes")	$adyes = "selected='selected'";	else $adyes = "";
 	if($allow_add_domain == "check")$adcheck = "selected='selected'";	else $adcheck = "";
@@ -132,6 +143,7 @@ function drawEditAdmin($admin){
 	$user_data .= dtcFormLineDraw( _("Allow addition of SSH logins:") ,$sshlog_selector);
 	$user_data .= dtcFormLineDraw( _("Allow addition of FTP logins:") ,$ftplog_selector,0);
 	$user_data .= dtcFormLineDraw( _("Allow the use of the package installer:") ,$pkg_install_selector);
+	$user_data .= dtcFormLineDraw( _("Allow the use of the game installer:") ,$g_install_selector);
 	$user_data .= dtcFromOkDraw()."</table></form>";
 
 	// Generate the admin tool configuration module
