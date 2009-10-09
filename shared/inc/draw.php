@@ -10,6 +10,7 @@ if($panel_type !="email"){
 	require("$dtcshared_path/inc/forms/ftp.php");
 	require("$dtcshared_path/inc/forms/ssh.php");
         require("$dtcshared_path/inc/forms/packager.php");
+		require("$dtcshared_path/inc/forms/game.php");
 	require("$dtcshared_path/inc/forms/admin_stats.php");
 	require("$dtcshared_path/inc/forms/invoices.php");
 	require("$dtcshared_path/inc/forms/domain_stats.php");
@@ -136,7 +137,8 @@ function drawAdminTools($admin){
 	$ssh_login_flag = $admin_info["ssh_login_flag"];
 	$ftp_login_flag = $admin_info["ftp_login_flag"];
 	$pkg_install_flag = $admin_info["pkg_install_flag"];
-
+    $g_install_flag = $admin_info["g_install_flag"];
+	
 	unset($user_ZEmenu);
 	if($nbr_domain > 0){
 		$user_ZEmenu[] = array(
@@ -277,6 +279,13 @@ function drawAdminTools($admin){
 					"type" => "link",
 					"link" => "package-installer");
 			}
+			if($g_install_flag == "yes"){
+				$domain_conf_submenu[] = array(
+					"text" => _("Game installer") ,
+					"icon" => "box_wnb_nb_picto-packageinstaller.gif",
+					"type" => "link",
+					"link" => "game-installer");
+			} 
                   }
 		}
 		if($admin_data[$i]["primary_mx"] == "default" && $domain_parking == "no-parking"){
@@ -475,6 +484,10 @@ function drawAdminTools($admin){
                         $web_editor .= "<img src=\"gfx/toolstitles/package-installer.png\" align=\"left\"><font size=\"+2\"><b><u>"._("Package installer:") ."</u></b><br></font>";
 			$web_editor .= drawAdminTools_PackageInstaller($eddomain,$adm_path);			
 			$title = _("Package") .": ".$edit_domain;
+			}else if(@$add_array[1] == "game-installer"){
+                        $web_editor .= "<img src=\"gfx/toolstitles/package-installer.png\" align=\"left\"><font size=\"+2\"><b><u>"._("Game installer:") ."</u></b><br></font>";
+			$web_editor .= drawAdminTools_GameInstaller($eddomain,$adm_path);			
+			$title = _("Game") .": ".$edit_domain;
 		}else if(@$add_array[1] == "nickhandles"){
                         $web_editor .= "<img src=\"gfx/toolstitles/nickhandles.png\" align=\"left\"><font size=\"+2\"><b><u>". _("DNS Nick handles") ."</u></b><br></font>";
 			$web_editor .= drawAdminTools_NickHandles($admin);
