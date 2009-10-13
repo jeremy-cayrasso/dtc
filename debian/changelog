@@ -1,3 +1,12 @@
+dtc (0.30.11-1) unstable; urgency=low
+
+  * New upstream release fixing the following:
+    - Repaired the monitor.php.
+    - Increased the default ssh connection rate in the firewall.
+    - Changed the text of the 406.php as it was quite missleading.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Tue, 13 Oct 2009 14:36:04 +0800
+
 dtc (0.30.10-1) unstable; urgency=low
 
   * New upstream release fixing the following:
