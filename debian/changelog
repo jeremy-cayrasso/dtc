@@ -1,3 +1,12 @@
+dtc (0.30.12-1) unstable; urgency=low
+
+  * New upstream release fixing the following:
+    - Fixed a bug with the email generation in the panel.
+    - textaera -> textarea in the template
+    - recalculate webalizer stats script debuged.
+
+ -- Thomas Goirand <thomas@goirand.fr>  Fri, 30 Oct 2009 04:28:21 +0800
+
 dtc (0.30.11-1) unstable; urgency=low
 
   * New upstream release fixing the following:
