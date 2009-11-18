@@ -1,3 +1,11 @@
+dtc (0.30.13-1) unstable; urgency=low
+
+  * New upstream release fixing the following:
+    - Bug in gen_maildrop_userdb.php - maildirmake hangs if target directory
+    tree not created thanks to Konstantin <f-kons@yandex.ru> (closes: #556734)
+
+ -- Thomas Goirand <thomas@goirand.fr>  Wed, 18 Nov 2009 16:33:46 +0800
+
 dtc (0.30.12-1) unstable; urgency=low
 
   * New upstream release fixing the following:
