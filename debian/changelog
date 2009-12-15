@@ -1,30 +1,21 @@
-dtc (0.30.13-1) unstable; urgency=low
+dtc (0.30.14-1) unstable; urgency=low
 
   * New upstream release fixing the following:
-    - Bug in gen_maildrop_userdb.php - maildirmake hangs if target directory
-    tree not created thanks to Konstantin <f-kons@yandex.ru> (Closes: #556734)
-    - Do not create a Maildir if email ID is cyrus or cyradm (Closes: #557360)
-    - Added the prods_graph.php that was missing for Makefile.
+    - [v0.30.11] Repaired the monitor.php.
+    - [v0.30.11] Increased the default ssh connection rate in the firewall.
+    - [v0.30.11] Changed the text of the 406.php as it was quite missleading.
+    - [v0.30.12] Fixed a bug with the email generation in the panel.
+    - [v0.30.12] textaera -> textarea in the template
+    - [v0.30.12] recalculate webalizer stats script debuged.
+    - [v0.30.13] Bug in gen_maildrop_userdb.php - maildirmake hangs if target
+    directory tree not created thanks to Konstantin <f-kons@yandex.ru>
+    (Closes: #556734)
+    - [v0.30.13] Do not create a Maildir if email ID is cyrus or cyradm
+    (Closes: #557360)
+    - [v0.30.13] Added the prods_graph.php that was missing for Makefile.
+    - [v0.30.14] If email quota is set to zero, then there's no quota at all.
 
- -- Thomas Goirand <thomas@goirand.fr>  Wed, 18 Nov 2009 16:33:46 +0800
-
-dtc (0.30.12-1) unstable; urgency=low
-
-  * New upstream release fixing the following:
-    - Fixed a bug with the email generation in the panel.
-    - textaera -> textarea in the template
-    - recalculate webalizer stats script debuged.
-
- -- Thomas Goirand <thomas@goirand.fr>  Fri, 30 Oct 2009 04:28:21 +0800
-
-dtc (0.30.11-1) unstable; urgency=low
-
-  * New upstream release fixing the following:
-    - Repaired the monitor.php.
-    - Increased the default ssh connection rate in the firewall.
-    - Changed the text of the 406.php as it was quite missleading.
-
- -- Thomas Goirand <thomas@goirand.fr>  Tue, 13 Oct 2009 14:36:04 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Tue, 15 Dec 2009 12:09:13 +0800
 
 dtc (0.30.10-1) unstable; urgency=low
 
