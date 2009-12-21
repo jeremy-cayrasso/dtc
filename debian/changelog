@@ -1,4 +1,4 @@
-dtc (0.30.15-1) unstable; urgency=low
+dtc (0.30.16-1) unstable; urgency=low
 
   * New upstream release fixing the following:
     - [v0.30.11] Repaired the monitor.php.
@@ -15,8 +15,13 @@ dtc (0.30.15-1) unstable; urgency=low
     - [v0.30.13] Added the prods_graph.php that was missing for Makefile.
     - [v0.30.14] If email quota is set to zero, then there's no quota at all.
     - [v0.30.15] Fixes /dtc/ client access to VPS graphs.
+    - [v0.30.16] Fixes unix rights issue for /var/log/dtc-stats-daemon.log
+    - [v0.30.16] Fixes rDNS generation
+    - [v0.30.16] Fixes fetchmail generation when no account has been added.
+    - [v0.30.16] Fixes Fixes the max record fetch by dtc-stats-daemon so it
+    has less chances to reach the php-cli maximum memory limit.
 
- -- Thomas Goirand <thomas@goirand.fr>  Tue, 15 Dec 2009 14:09:13 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Mon, 21 Dec 2009 19:20:45 +0800
 
 dtc (0.30.10-1) unstable; urgency=low
 
