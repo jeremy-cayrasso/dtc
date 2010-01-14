@@ -1,4 +1,4 @@
-dtc (0.30.16-1) unstable; urgency=low
+dtc (0.30.17-1) unstable; urgency=low
 
   * New upstream release fixing the following:
     - [v0.30.11] Repaired the monitor.php.
@@ -20,9 +20,10 @@ dtc (0.30.16-1) unstable; urgency=low
     - [v0.30.16] Fixes fetchmail generation when no account has been added.
     - [v0.30.16] Fixes Fixes the max record fetch by dtc-stats-daemon so it
     has less chances to reach the php-cli maximum memory limit.
-    - [v0.30.17] Added an IP pool usage function
+    - [v0.30.17] Added an IP pool usage function showing the ip to host map
+    what the IP are used for (vps, dedicated, ssl or dom0) and the free IPs.
 
- -- Thomas Goirand <thomas@goirand.fr>  Mon, 21 Dec 2009 19:20:45 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Thu, 14 Jan 2010 23:12:41 +0800
 
 dtc (0.30.10-1) unstable; urgency=low
 
