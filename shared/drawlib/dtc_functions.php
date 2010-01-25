@@ -563,7 +563,7 @@ function isMailPassword($login){
 }
 
 function isDTCPassword($pass){
-	$reg = "^([a-zA-Z0-9]){4,16}\$";
+	$reg = "^([a-zA-Z0-9]){4,255}\$";
 	if(!ereg($reg,$pass))	return false;
 	else			return true;
 }
