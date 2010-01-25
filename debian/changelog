@@ -1,4 +1,4 @@
-dtc (0.30.17-1) unstable; urgency=low
+dtc (0.30.18-1) unstable; urgency=low
 
   * New upstream release fixing the following:
     - [v0.30.11] Repaired the monitor.php.
@@ -22,8 +22,9 @@ dtc (0.30.17-1) unstable; urgency=low
     has less chances to reach the php-cli maximum memory limit.
     - [v0.30.17] Added an IP pool usage function showing the ip to host map
     what the IP are used for (vps, dedicated, ssl or dom0) and the free IPs.
+    - [v0.30.18] Increased the max password lenght (Closes: #566651).
 
- -- Thomas Goirand <thomas@goirand.fr>  Thu, 14 Jan 2010 23:12:41 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Mon, 25 Jan 2010 12:15:21 +0800
 
 dtc (0.30.10-1) unstable; urgency=low
 
