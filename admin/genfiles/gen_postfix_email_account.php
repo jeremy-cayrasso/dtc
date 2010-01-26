@@ -52,6 +52,7 @@ function mail_account_generate_postfix(){
 	global $conf_use_mail_alias_group;
 
 	global $conf_support_ticket_email;
+	global $conf_support_ticket_domain;
 	global $conf_main_domain;
 
 	global $adm_realpass;
@@ -431,7 +432,7 @@ function mail_account_generate_postfix(){
 
 	// Add the support@ email
 	$aliases_file .= "dtc_support_ticket_messages: \"|/usr/share/dtc/admin/support-receive.php\"\n";
-	$domains_postmasters_file .= $conf_support_ticket_email."@".$conf_main_domain." dtc_support_ticket_messages\n";
+	$domains_postmasters_file .= $conf_support_ticket_email."@".$conf_support_ticket_domain." dtc_support_ticket_messages\n";
 
 	//write out our config files
 	$fp = fopen ( "$conf_postfix_virtual_mailbox_domains_path", "w");
