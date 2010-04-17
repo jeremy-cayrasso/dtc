@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS admin (
   ssh_login_flag enum('yes','no') NOT NULL default 'no',
   ftp_login_flag enum('yes','no') NOT NULL default 'yes',
   pkg_install_flag enum('yes','no') NOT NULL default 'yes',
+  g_install_flag enum('yes','no') NOT NULL default 'no',
   ob_head varchar(64) NOT NULL default '',
   ob_tail varchar(64) NOT NULL default '',
   ob_next varchar(64) NOT NULL default '',
