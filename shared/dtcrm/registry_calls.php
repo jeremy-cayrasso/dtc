@@ -79,7 +79,7 @@ function registry_add_nameserver($adm_login,$adm_pass,$subdomain,$domain_name,$i
 	if($id === FALSE){
 		return FALSE;
 	}
-	return $registry_api_modules[$id]["registry_add_nameserver"]($adm_login,$adm_pass,$domain_name,$period,$contacts,$dns_servers);
+	return $registry_api_modules[$id]["registry_add_nameserver"]($adm_login,$adm_pass,$subdomain,$domain_name,$ip);
 }
 
 function registry_modify_nameserver($adm_login,$adm_pass,$subdomain,$domain_name,$ip){
