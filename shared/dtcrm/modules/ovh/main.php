@@ -56,26 +56,87 @@ $ret["response_text"] = "Domain name already registred";
 	
 } 
 
-function ovh_registry_modify_nameserver (){
-	
-/* 	try {
- 
- //login
+
+function ovh_registry_add_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name,$ip){
+
+ $regz["is_success"] = 0;
+
+	try {
+//login 
    $soap = ovh_open();
    $session = login_ovh();
 
- //domainDnsUpdate
- $result = $soap->domainDnsUpdate($session, "domain", "dns1", "ip1", "dns2", "ip", "dns3", "ip", "dns4 ", "ip", "dns5", "ip");
- echo "domainDnsUpdate successfull\n";
- print_r($result); // your code here ...
-
+ //domainHostAdd
+ $result = $soap->domainHostAdd($session,$domain_name,$subdomain,$ip);
+ $regz["is_success"] = 1;
  //logout
-   logout_ovh($soap,$session);
+ logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
  echo $fault;
-} */
+ }
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Add failed";
+	}
+return $regz;
 
+}
+ 
+function ovh_registry_delete_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name){
+
+ $regz["is_success"] = 0;
+
+	try {
+//login 
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+	//domainHostDel
+ $result = $soap->domainHostDel($session,$domain_name,$subdomain);
+$regz["is_success"] = 1;
+ //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Delete failed";
+	}
+
+return $regz;
+}
+
+function ovh_registry_modify_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name,$ip){
+	 
+	 $regz["is_success"] = 0;
+	 
+		try {
+//login 
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+	 //domainHostUpdate
+ $result = $soap->domainHostUpdate($session, "$domain_name", "$subdomain", "$ip");
+ $regz["is_success"] = 1;
+  //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Update failed";
+	}
+
+return $regz;
 }
 
 function ovh_registry_register_domain ($adm_login,$adm_pass,$fqdn,$period,$contacts,$dns_servers,$new_user){
@@ -506,9 +567,9 @@ $registry_api_modules[] = array(
 "name" => "ovh",
 "configure_descriptor" => $configurator,
 "registry_check_availability" => "ovh_registry_check_availability",
-"registry_add_nameserver" => "ovh_registry_modify_nameserver",
+"registry_add_nameserver" => "ovh_registry_add_nameserver",
 "registry_modify_nameserver" => "ovh_registry_modify_nameserver",
-"registry_delete_nameserver" => "ovh_registry_modify_nameserver",
+"registry_delete_nameserver" => "ovh_registry_delete_nameserver",
 "registry_get_auth_code" => "ovh_registry_get_auth_code",
 "registry_register_domain" => "ovh_registry_register_domain",
 "registry_update_whois_info" => "ovh_registry_update_whois_info",
@@ -519,4 +580,5 @@ $registry_api_modules[] = array(
 "registry_get_whois" => "ovh_registry_get_whois",
 "registry_transfert_domain" => "ovh_registry_transfert_domain",
 "registry_check_renew" => "ovh_registry_check_renew"
-);?>
+);
+?>
