@@ -41,6 +41,7 @@ function mail_account_generate_postfix(){
 
 	global $conf_generated_file_path;
 	global $conf_addr_mail_server;
+	global $conf_dtcadmin_path;
 
 	global $conf_unix_type;
 
@@ -432,11 +433,11 @@ function mail_account_generate_postfix(){
 	}
 
 	// Add the support@ email
-	$aliases_file .= "dtc_support_ticket_messages: \"|/usr/share/dtc/admin/support-receive.php\"\n";
+	$aliases_file .= "dtc_support_ticket_messages: \"| ".$conf_dtcadmin_path."/support-receive.php\"\n";
 	$domains_postmasters_file .= $conf_support_ticket_email."@".$conf_support_ticket_domain." dtc_support_ticket_messages\n";
 
 	// Add the supportforward@ email
-	$aliases_file .= "dtc_support_forward_ticket_messages: \"| reformime -e -s 1.2 | /usr/share/dtc/admin/support-receive.php\"\n";
+	$aliases_file .= "dtc_support_forward_ticket_messages: \"| reformime -e -s 1.2 | ".$conf_dtcadmin_path."/support-receive.php\"\n";
 	$domains_postmasters_file .= $conf_support_ticket_fw_email."@".$conf_support_ticket_domain." dtc_support_ticket_messages\n";
 
 	//write out our config files

@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	dtc
-PORTVERSION=	__VERSION__
+PORTVERSION=	__VERSION__.__RELEASE__
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.gplhost.sg/pub/dtc/bsd/ \
 		ftp://qala-sg.apt-proxy.gplhost.sg/pub/dtc/bsd/ \
@@ -37,7 +37,10 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/mysqld:${PORTSDIR}/databases/mysql50-server \
 		${LOCALBASE}/bin/mlmmj-list:${PORTSDIR}/mail/mlmmj \
 		${LOCALBASE}/bin/ncftpput:${PORTSDIR}/ftp/ncftp3 \
 		${LOCALBASE}/bin/rrdtool:${PORTSDIR}/databases/rrdtool \
-		${LOCALBASE}/sbin/logrotate:${PORTSDIR}/sysutils/logrotate
+		${LOCALBASE}/sbin/logrotate:${PORTSDIR}/sysutils/logrotate \
+		${LOCALBASE}/bin/bash:${PORTSDIR}/shells/bash
+
+
 
 CONFLICTS=	dtc-toaster-[0-9]* dtc-postfix-courier-[0-9]*
 
@@ -77,7 +80,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/postfix/smtpd:${PORTSDIR}/mail/postfix
 RUN_DEPENDS+=	${LOCALBASE}/cyrus/bin/deliver:${PORTSDIR}/mail/cyrus-imapd23
 .elif defined(WITH_COURIER_IMAP)
 RUN_DEPENDS+=	${LOCALBASE}/sbin/pop3login:${PORTSDIR}/mail/courier-imap \
-		${LOCALBASE}lib/courier-authlib/libauthmysql.a:${PORTSDIR}/databases/courier-authlib-mysql
+		${LOCALBASE}/lib/courier-authlib/libauthmysql.a:${PORTSDIR}/databases/courier-authlib-mysql
 .endif
 
 .if defined(WITH_MAILDROP)
@@ -114,6 +117,10 @@ USE_APACHE=	2.2+
 RUN_DEPENDS+=	${LOCALBASE}/sbin/dovecot:${PORTSDIR}/mail/dovecot
 .endif
 
+.if defined(WITH_MYSQMAIL)
+RUN_DEPENDS+=	${LOCALBASE}/sbin/mysqmail-postfix-logger:${PORTSDIR}/sysutils/mysqmail
+.endif
+
 SUB_FILES=	dtc-install dtc-deinstall
 SUB_LIST+=	WWWDIR=${WWWDIR} QMAIL_DIR="${QMAIL_DIR}"
 MAN8=		dtc-chroot-shell.8
@@ -122,9 +129,9 @@ MANCOMPRESSED=	no
 do-install:
 	@${INSTALL_SCRIPT} ${WRKDIR}/dtc-install ${PREFIX}/sbin/dtc-install
 	@${INSTALL_SCRIPT} ${WRKDIR}/dtc-deinstall ${PREFIX}/sbin/dtc-deinstall
-	@${MAKE} -C ${WRKDIR}/dtc-__VERSION__ install-dtc-common INSTALL=install \
+	@${MAKE} -C ${WRKDIR}/dtc-__VERSION__.__RELEASE__ install-dtc-common INSTALL=install \
 		DTC_APP_DIR=${WWWDIR} DTC_GEN_DIR=${PREFIX}/var/dtc CONFIG_DIR=${PREFIX}/etc DTC_ETC_DIRECTORY=${ETCDIR} \
-		DTC_DOC_DIR=${DOCSDIR} MANUAL_DIR=${MANPREFIX}/man BIN_DIR=${PREFIX}/bin UNIX_TYPE=bsd
+		DTC_DOC_DIR=${DOCSDIR} MANUAL_DIR=${MANPREFIX}/man BIN_DIR=${PREFIX}/bin UNIX_TYPE=bsd VERS=__VERSION__
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
