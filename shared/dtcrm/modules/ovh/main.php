@@ -123,6 +123,7 @@ function ovh_registry_modify_nameserver ($adm_login,$adm_pass,$subdomain,$domain
 	 //domainHostUpdate
  $result = $soap->domainHostUpdate($session, "$domain_name", "$subdomain", "$ip");
  $regz["is_success"] = 1;
+ 
   //logout
  logout_ovh($soap,$session);
 
@@ -211,7 +212,32 @@ if($regz["is_success"] == 1){
  return $regz;
 }
 
-function ovh_registry_update_whois_dns(){
+function ovh_registry_update_whois_dns($adm_login,$adm_pass,$domain_name,$dns,$dns_ip=array()){
+	  $regz["is_success"] = 0;
+	  
+	  	try {
+//login 
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+	//domainDnsUpdate
+ $result = $soap->domainDnsUpdate($session, $domain-name, $dns[0], $dns_ip[0], $dns[1], $dns_ip[1], $dns[2], $dns_ip[2], $dns[3], $dns_ip[3], $dns[4], $dns_ip[4]);
+ print_r($result);
+  $regz["is_success"] = 1;
+  
+   //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Update DNS failed";
+	}
+
+return $regz;
 }
 
 function ovh_registry_update_whois_info(){
