@@ -487,7 +487,7 @@ function cronMailSystem () {
 
                         // first stop queue processing in postfix
                         echo "Stopping postfix queue...\n";
-                        system("$PATH_POSTSUPER -h ALL 2&>1");
+                        system("$PATH_POSTSUPER -h ALL 2>&1");
 
 			echo "Reloading amavis\n";
 			if( file_exists ("/etc/init.d/amavis") ){
@@ -508,7 +508,7 @@ function cronMailSystem () {
 			}
 			
 			echo "Starting postfix queue...\n";
-                        system("$PATH_POSTSUPER -H ALL 2&>1");
+                        system("$PATH_POSTSUPER -H ALL 2>&1");
 
 			echo "Flushing the queue now, to make sure we have some mail delivery happening after amavisd restart...\n";
                         system("$PATH_POSTFIX_SCRIPT flush");
