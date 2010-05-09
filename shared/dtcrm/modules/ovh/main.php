@@ -259,23 +259,40 @@ function ovh_registry_update_whois_info(){
  echo $fault;
 } */
 
-/* try {
+ try {
 
  //login
    $soap = ovh_open();
    $session = login_ovh();
 
  //nicPublicInfo
- $result = $soap->nicPublicInfo($session, "nic");
- echo "nicPublicInfo successfull\n";
- print_r($result); // your code here ...
-
- //logout
-   logout_ovh($soap,$session);
+ $result = $soap->nicPublicInfo($session, "cg69699-ovh");
 
 } catch(SoapFault $fault) {
- echo $fault;
-} */
+ echo "error";
+} 
+if (isset($result->nic)){
+       echo "ok ";
+
+try { 
+//nicModifyInfos
+ $soap->nicModifyInfos($session, "name ", "firstname", "legalform", "organisation", "address", "zip ", "city", "country", "phone", "fax", "email", "spareEmail", "language", "vat");
+}catch(SoapFault $fault) {
+ echo "error";
+} 
+
+}else{
+	echo "bad ";
+try{
+//nicCreate
+ $result = $soap->nicCreate($session, "name", "firstname", "password", "email", "phone", "fax", "address", "city", "area", "zip", "country", "language", false, "legalform", "organisation", "legalName", "legalNumber", "vat");
+ echo "nicCreate successfull\n";
+ print_r($result); // your code here ...
+}catch(SoapFault $fault) {
+ echo "error";
+} 
+
+}
 
 /* try {
 
