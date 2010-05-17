@@ -22,7 +22,7 @@ dtc (0.30.18-1) unstable; urgency=low
     has less chances to reach the php-cli maximum memory limit.
     - [v0.30.17] Added an IP pool usage function showing the ip to host map
     what the IP are used for (vps, dedicated, ssl or dom0) and the free IPs.
-    - [v0.30.18] Increased the max password lenght (Closes: #566651).
+    - [v0.30.18] Increased the max password length (Closes: #566651).
     - [v0.30.18] Fixed the default admin site for URL and the new .htaccess.
     - [v0.30.18] Removed test mode from dkim signature that was advertised in
     the DNS, making domains fail the dkim signature checks on some mail
