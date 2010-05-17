@@ -1,4 +1,4 @@
-dtc (0.30.18-1) unstable; urgency=low
+dtc (0.30.19-1) unstable; urgency=low
 
   * New upstream release fixing the following:
     - [v0.30.11] Repaired the monitor.php.
@@ -40,8 +40,19 @@ dtc (0.30.18-1) unstable; urgency=low
     renewals.php
     - [v0.30.18] Set a default rDNS of the form
     mx.xenXX.nodeYYYY.example.com for new VPSes that match the default hostname
+    - [v0.30.19] Corrects some spelling issues in debian/control, adds the
+    debian/source/format file (still format 1.0 as there's no need for patches,
+    because upstream == debian maintainer).
+    - [v0.30.19] Non debian-specific bugfixing as follow: Orders the "Add VPS"
+    by server_hostname,vps_xen_name, check for existance of maildirsize before
+    attempting chown, fixed a typo when redirecting the postsuper output, chown
+    of some files for xen servers nodes were missing, forbids certain names for
+    mysql dbs (mysql, apachelogs, etc.), makes an SSL vhost available when a
+    user holding one is deleted, checks if os is 64 bits when managing lib64
+    folder, a typo in the email signatures, a button to delete a support ticket
+    thread silently.
 
- -- Thomas Goirand <thomas@goirand.fr>  Mon, 25 Jan 2010 12:15:21 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Tue, 18 May 2010 02:27:12 +0800
 
 dtc (0.30.10-1) unstable; urgency=low
 

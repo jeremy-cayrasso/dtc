@@ -79,7 +79,7 @@ Description: web control panel for admin and accounting hosting services (fewer 
  does the billing in general (including billing of dedicated servers), has
  integrated support tickets and more.
  .
- This is a meta-package containing as few dependencies as possible to let you
+ This is a metapackage containing as few dependencies as possible to let you
  choose what daemon you want to use. Even the MySQL server wont be pulled by
  default.
 
@@ -103,9 +103,10 @@ Description: web control panel for admin and accounting hosting services (cyrus 
  does the billing in general (including billing of dedicated servers), has
  integrated support tickets and more.
  .
- This package contains dependencies to setup with Cyrus, so you don't have to
- select them by hand. If you want to use other daemons, use the dtc-core package
- which has a lot less dependencies, or use dtc-postfix-courier or dtc-toaster.
+ This metapackage contains dependencies to setup with Cyrus, so you don't have
+ to select them by hand. If you want to use other daemons, use the dtc-core
+ package which has a lot less dependencies, or use dtc-postfix-courier or
+ dtc-toaster.
 
 Package: dtc-postfix-courier
 Architecture: all
@@ -128,10 +129,10 @@ Description: web control panel for admin and accounting hosting services (more d
  does the billing in general (including billing of dedicated servers), has
  integrated support tickets and more.
  .
- This package has more dependencies to setup postfix, courier, and others so you
- don't have to select them by hand. If you want to use other daemons, use the
- dtc-core package which has a lot less dependencies, or the dtc-cyrus to setup
- with cyrus.
+ This metapackage has more dependencies to setup postfix, courier, and others
+ so you don't have to select them by hand. If you want to use other daemons,
+ use the dtc-core package which has a lot less dependencies, or the dtc-cyrus
+ to setup with cyrus.
 
 Package: dtc-stats-daemon
 Architecture: all
