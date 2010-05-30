@@ -1,6 +1,26 @@
 dtc (0.30.19-1) unstable; urgency=low
 
   * New upstream release fixing the following:
+    - Corrects some spelling issues in debian/control, adds the
+    debian/source/format file (still format 1.0 as there's no need for patches,
+    because upstream == debian maintainer).
+    - Non debian-specific bugfixing as follow: Orders the "Add VPS" by
+    server_hostname,vps_xen_name, check for existance of maildirsize before
+    attempting chown, fixed a typo when redirecting the postsuper output, chown
+    of some files for xen servers nodes were missing, forbids certain names for
+    mysql dbs (mysql, apachelogs, etc.), makes an SSL vhost available when a
+    user holding one is deleted, checks if os is 64 bits when managing lib64
+    folder, a typo in the email signatures, a button to delete a support ticket
+    thread silently.
+    - Using an export XML file to import all the configuration of a virtual
+    administrator now works (previously, it was working only with a single
+    domain name).
+
+ -- Thomas Goirand <thomas@goirand.fr>  Mon, 31 May 2010 01:29:05 +0800
+
+dtc (0.30.18-1) unstable; urgency=low
+
+  * New upstream release fixing the following:
     - [v0.30.11] Repaired the monitor.php.
     - [v0.30.11] Increased the default ssh connection rate in the firewall.
     - [v0.30.11] Changed the text of the 406.php as it was quite missleading.
@@ -22,7 +42,7 @@ dtc (0.30.19-1) unstable; urgency=low
     has less chances to reach the php-cli maximum memory limit.
     - [v0.30.17] Added an IP pool usage function showing the ip to host map
     what the IP are used for (vps, dedicated, ssl or dom0) and the free IPs.
-    - [v0.30.18] Increased the max password length (Closes: #566651).
+    - [v0.30.18] Increased the max password lenght (Closes: #566651).
     - [v0.30.18] Fixed the default admin site for URL and the new .htaccess.
     - [v0.30.18] Removed test mode from dkim signature that was advertised in
     the DNS, making domains fail the dkim signature checks on some mail
@@ -40,19 +60,8 @@ dtc (0.30.19-1) unstable; urgency=low
     renewals.php
     - [v0.30.18] Set a default rDNS of the form
     mx.xenXX.nodeYYYY.example.com for new VPSes that match the default hostname
-    - [v0.30.19] Corrects some spelling issues in debian/control, adds the
-    debian/source/format file (still format 1.0 as there's no need for patches,
-    because upstream == debian maintainer).
-    - [v0.30.19] Non debian-specific bugfixing as follow: Orders the "Add VPS"
-    by server_hostname,vps_xen_name, check for existance of maildirsize before
-    attempting chown, fixed a typo when redirecting the postsuper output, chown
-    of some files for xen servers nodes were missing, forbids certain names for
-    mysql dbs (mysql, apachelogs, etc.), makes an SSL vhost available when a
-    user holding one is deleted, checks if os is 64 bits when managing lib64
-    folder, a typo in the email signatures, a button to delete a support ticket
-    thread silently.
 
- -- Thomas Goirand <thomas@goirand.fr>  Tue, 18 May 2010 02:27:12 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Mon, 25 Jan 2010 12:15:21 +0800
 
 dtc (0.30.10-1) unstable; urgency=low
 
