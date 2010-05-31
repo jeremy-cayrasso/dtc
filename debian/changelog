@@ -14,7 +14,7 @@ dtc (0.30.19-1) unstable; urgency=low
     thread silently.
     - Using an export XML file to import all the configuration of a virtual
     administrator now works (previously, it was working only with a single
-    domain name).
+    domain name). MySQL db definition exports are now also working.
 
  -- Thomas Goirand <thomas@goirand.fr>  Mon, 31 May 2010 01:29:05 +0800
 
