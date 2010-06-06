@@ -56,26 +56,88 @@ $ret["response_text"] = "Domain name already registred";
 	
 } 
 
-function ovh_registry_modify_nameserver (){
-	
-/* 	try {
- 
- //login
+
+function ovh_registry_add_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name,$ip){
+
+ $regz["is_success"] = 0;
+
+	try {
+//login 
    $soap = ovh_open();
    $session = login_ovh();
 
- //domainDnsUpdate
- $result = $soap->domainDnsUpdate($session, "domain", "dns1", "ip1", "dns2", "ip", "dns3", "ip", "dns4 ", "ip", "dns5", "ip");
- echo "domainDnsUpdate successfull\n";
- print_r($result); // your code here ...
-
+ //domainHostAdd
+ $result = $soap->domainHostAdd($session,$domain_name,$subdomain,$ip);
+ $regz["is_success"] = 1;
  //logout
-   logout_ovh($soap,$session);
+ logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
  echo $fault;
-} */
+ }
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Add failed";
+	}
+return $regz;
 
+}
+ 
+function ovh_registry_delete_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name){
+
+ $regz["is_success"] = 0;
+
+	try {
+//login 
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+	//domainHostDel
+ $result = $soap->domainHostDel($session,$domain_name,$subdomain);
+$regz["is_success"] = 1;
+ //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Delete failed";
+	}
+
+return $regz;
+}
+
+function ovh_registry_modify_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name,$ip){
+	 
+	 $regz["is_success"] = 0;
+	 
+		try {
+//login 
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+	 //domainHostUpdate
+ $result = $soap->domainHostUpdate($session, "$domain_name", "$subdomain", "$ip");
+ $regz["is_success"] = 1;
+ 
+  //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Update failed";
+	}
+
+return $regz;
 }
 
 function ovh_registry_register_domain ($adm_login,$adm_pass,$fqdn,$period,$contacts,$dns_servers,$new_user){
@@ -150,7 +212,32 @@ if($regz["is_success"] == 1){
  return $regz;
 }
 
-function ovh_registry_update_whois_dns(){
+function ovh_registry_update_whois_dns($adm_login,$adm_pass,$domain_name,$dns,$dns_ip=array()){
+	  $regz["is_success"] = 0;
+	  
+	  	try {
+//login 
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+	//domainDnsUpdate
+ $result = $soap->domainDnsUpdate($session, $domain-name, $dns[0], $dns_ip[0], $dns[1], $dns_ip[1], $dns[2], $dns_ip[2], $dns[3], $dns_ip[3], $dns[4], $dns_ip[4]);
+ print_r($result);
+  $regz["is_success"] = 1;
+  
+   //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+if($regz["is_success"] == 1){
+	$regz["response_text"] = $result;
+} else{
+	$regz["response_text"] = "Update DNS failed";
+	}
+
+return $regz;
 }
 
 function ovh_registry_update_whois_info(){
@@ -172,23 +259,40 @@ function ovh_registry_update_whois_info(){
  echo $fault;
 } */
 
-/* try {
+ try {
 
  //login
    $soap = ovh_open();
    $session = login_ovh();
 
  //nicPublicInfo
- $result = $soap->nicPublicInfo($session, "nic");
- echo "nicPublicInfo successfull\n";
- print_r($result); // your code here ...
-
- //logout
-   logout_ovh($soap,$session);
+ $result = $soap->nicPublicInfo($session, "cg69699-ovh");
 
 } catch(SoapFault $fault) {
- echo $fault;
-} */
+ echo "error";
+} 
+if (isset($result->nic)){
+       echo "ok ";
+
+try { 
+//nicModifyInfos
+ $soap->nicModifyInfos($session, "name ", "firstname", "legalform", "organisation", "address", "zip ", "city", "country", "phone", "fax", "email", "spareEmail", "language", "vat");
+}catch(SoapFault $fault) {
+ echo "error";
+} 
+
+}else{
+	echo "bad ";
+try{
+//nicCreate
+ $result = $soap->nicCreate($session, "name", "firstname", "password", "email", "phone", "fax", "address", "city", "area", "zip", "country", "language", false, "legalform", "organisation", "legalName", "legalNumber", "vat");
+ echo "nicCreate successfull\n";
+ print_r($result); // your code here ...
+}catch(SoapFault $fault) {
+ echo "error";
+} 
+
+}
 
 /* try {
 
@@ -506,9 +610,9 @@ $registry_api_modules[] = array(
 "name" => "ovh",
 "configure_descriptor" => $configurator,
 "registry_check_availability" => "ovh_registry_check_availability",
-"registry_add_nameserver" => "ovh_registry_modify_nameserver",
+"registry_add_nameserver" => "ovh_registry_add_nameserver",
 "registry_modify_nameserver" => "ovh_registry_modify_nameserver",
-"registry_delete_nameserver" => "ovh_registry_modify_nameserver",
+"registry_delete_nameserver" => "ovh_registry_delete_nameserver",
 "registry_get_auth_code" => "ovh_registry_get_auth_code",
 "registry_register_domain" => "ovh_registry_register_domain",
 "registry_update_whois_info" => "ovh_registry_update_whois_info",
@@ -519,4 +623,5 @@ $registry_api_modules[] = array(
 "registry_get_whois" => "ovh_registry_get_whois",
 "registry_transfert_domain" => "ovh_registry_transfert_domain",
 "registry_check_renew" => "ovh_registry_check_renew"
-);?>
+);
+?>
