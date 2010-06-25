@@ -1,22 +1,35 @@
-dtc (0.30.19-1) unstable; urgency=low
+dtc (0.30.20-1) unstable; urgency=low
 
   * New upstream release fixing the following:
-    - Corrects some spelling issues in debian/control, adds the
+    - [v0.30.19] Corrects some spelling issues in debian/control, adds the
     debian/source/format file (still format 1.0 as there's no need for patches,
     because upstream == debian maintainer).
-    - Non debian-specific bugfixing as follow: Orders the "Add VPS" by
-    server_hostname,vps_xen_name, check for existance of maildirsize before
-    attempting chown, fixed a typo when redirecting the postsuper output, chown
-    of some files for xen servers nodes were missing, forbids certain names for
-    mysql dbs (mysql, apachelogs, etc.), makes an SSL vhost available when a
-    user holding one is deleted, checks if os is 64 bits when managing lib64
-    folder, a typo in the email signatures, a button to delete a support ticket
-    thread silently.
-    - Using an export XML file to import all the configuration of a virtual
-    administrator now works (previously, it was working only with a single
-    domain name). MySQL db definition exports are now also working.
+    - [v0.30.19] Non debian-specific bugfixing as follow:
+      - Orders the "Add VPS" by server_hostname,vps_xen_name
+      - check for existance of maildirsize before attempting chown
+      - fixed a typo when redirecting the postsuper output
+      - chown of some files for xen servers nodes were missing
+      - forbids certain names for mysql dbs (mysql, apachelogs, etc.)
+      - makes an SSL vhost available when a user holding one is deleted
+      - checks if os is 64 bits when managing lib64 folder
+      - a typo in the email signatures
+      - a button to delete a support ticket thread silently
+      - Using an export XML file to import all the configuration of a virtual
+      administrator now works (previously, it was working only with a single
+      domain name). MySQL db definition exports are now also working, and
+      UID/GID are fixed as they should in the DB for FTP/SSH/MAIL.
+      - Using mkdir -p instead of just mkdir when creating a new user path.
+    - [v0.30.20] Non debian-specific bugfixing as follow:
+      - Removed the total_du warning in the "My Account" screen.
+      - Now rendering the statistics table with CSS and not ugly html
+      - Killed the code for "repairing" http_accounting table that was in fact
+      reseting user bandwidth stats for the current month at each upgrade.
+      - Now /dtcadmin (vs /dtcadmin/) works again
+      - Renamed the HTTPRequest class to dtc_HTTPRequest in order to avoid
+      conflicts with the PHP PEAR library.
+    - Added a global graphic overview of VPS servers (I/O, CPU, net...)
 
- -- Thomas Goirand <thomas@goirand.fr>  Mon, 31 May 2010 01:29:05 +0800
+ -- Thomas Goirand <thomas@goirand.fr>  Fri, 25 Jun 2010 12:25:19 +0800
 
 dtc (0.30.18-1) unstable; urgency=low
 
