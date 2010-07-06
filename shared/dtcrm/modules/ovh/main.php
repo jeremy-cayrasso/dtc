@@ -11,14 +11,14 @@ return $soap;
 
 function login_ovh(){
 	   global $conf_ovh_username;
-       global $conf_ovh_password;
-       global $conf_ovh_boolean;
+           global $conf_ovh_password;
+           global $conf_ovh_boolean;
 	   global $conf_ovh_language;
 	   
-       $ovh_username = $conf_ovh_username;
-       $ovh_password = $conf_ovh_password;
-       $ovh_langage = $conf_ovh_language;
-       $ovh_boolean = $conf_ovh_boolean;
+           $ovh_username = $conf_ovh_username;
+           $ovh_password = $conf_ovh_password;
+           $ovh_langage = $conf_ovh_language;
+           $ovh_boolean = $conf_ovh_boolean;
 	   $soap = ovh_open();
 	   
  $session = $soap->login($ovh_username,$ovh_password,$ovh_langage,$ovh_boolean);
@@ -56,26 +56,88 @@ $ret["response_text"] = "Domain name already registred";
 	
 } 
 
-function ovh_registry_modify_nameserver (){
-	
-/* 	try {
- 
- //login
+function ovh_registry_add_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name,$ip){
+
+ $regz["is_success"] = 0;
+
+try {
+//login
    $soap = ovh_open();
    $session = login_ovh();
 
- //domainDnsUpdate
- $result = $soap->domainDnsUpdate($session, "domain", "dns1", "ip1", "dns2", "ip", "dns3", "ip", "dns4 ", "ip", "dns5", "ip");
- echo "domainDnsUpdate successfull\n";
- print_r($result); // your code here ...
-
+ //domainHostAdd
+ $result = $soap->domainHostAdd($session,$domain_name,$subdomain,$ip);
+ $regz["is_success"] = 1;
  //logout
-   logout_ovh($soap,$session);
+ logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
  echo $fault;
-} */
+ }
+if($regz["is_success"] == 1){
+$regz["response_text"] = $result;
+} else{
+$regz["response_text"] = "Add failed";
+}
+return $regz;
 
+}
+ 
+function ovh_registry_delete_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name){
+
+ $regz["is_success"] = 0;
+
+try {
+//login
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+//domainHostDel
+ $result = $soap->domainHostDel($session,$domain_name,$subdomain);
+ $regz["is_success"] = 1;
+
+ //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+if($regz["is_success"] == 1){
+$regz["response_text"] = $result;
+} else{
+$regz["response_text"] = "Delete failed";
+}
+
+return $regz;
+}
+
+function ovh_registry_modify_nameserver ($adm_login,$adm_pass,$subdomain,$domain_name,$ip){
+
+$regz["is_success"] = 0;
+
+try {
+//login
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+//domainHostUpdate
+ $result = $soap->domainHostUpdate($session, "$domain_name", "$subdomain", "$ip");
+ $regz["is_success"] = 1;
+ 
+  //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+ echo $fault;
+}
+
+if($regz["is_success"] == 1){
+$regz["response_text"] = $result;
+} else{
+$regz["response_text"] = "Update failed";
+}
+
+return $regz;
 }
 
 function ovh_registry_register_domain ($adm_login,$adm_pass,$fqdn,$period,$contacts,$dns_servers,$new_user){
@@ -87,21 +149,21 @@ function ovh_registry_register_domain ($adm_login,$adm_pass,$fqdn,$period,$conta
 	global $conf_ovh_nicbilling;
 	global $conf_ovh_boolean;
 	global $conf_addr_primary_dns;
-    global $conf_addr_secondary_dns;
+        global $conf_addr_secondary_dns;
 
 	$ovh_boolean = $conf_ovh_boolean;
 	$ovh_username = $conf_ovh_username;
 	$dnsfirst_ovh = $conf_addr_primary_dns;
-    $dnssecond_ovh = $conf_addr_secondary_dns;
+        $dnssecond_ovh = $conf_addr_secondary_dns;
 
-    $ovh_domain_name = $fqdn;
-    $ovh_nicadmin = $conf_ovh_nicadmin;
-    $ovh_nictech = $conf_ovh_nictech;
-    $ovh_nicowner = $conf_ovh_nicowner;
-    $ovh_nicbilling = $conf_ovh_nicbilling;
+        $ovh_domain_name = $fqdn;
+        $ovh_nicadmin = $conf_ovh_nicadmin;
+        $ovh_nictech = $conf_ovh_nictech;
+        $ovh_nicowner = $conf_ovh_nicowner;
+        $ovh_nicbilling = $conf_ovh_nicbilling;
 
-    $ovh_dns1 = $dns_servers[0];
-    $ovh_dns2 = $dns_servers[1];
+        $ovh_dns1 = $dns_servers[0];
+        $ovh_dns2 = $dns_servers[1];
 
 if($dns_servers[0] == "default"){
 	$ovh_dns1 = $dnsfirst_ovh;
@@ -150,69 +212,38 @@ if($regz["is_success"] == 1){
  return $regz;
 }
 
-function ovh_registry_update_whois_dns(){
+function ovh_registry_update_whois_dns($adm_login,$adm_pass,$domain_name,$dns,$dns_ip=array()){
+$regz["is_success"] = 0;
+
+try {
+//login
+   $soap = ovh_open();
+   $session = login_ovh();
+   
+//domainDnsUpdate
+ $result = $soap->domainDnsUpdate($session, $domain-name, $dns[0], $dns_ip[0], $dns[1], $dns_ip[1], $dns[2], $dns_ip[2], $dns[3], $dns_ip[3], $dns[4], $dns_ip[4]);
+ print_r($result);
+  $regz["is_success"] = 1;
+  
+   //logout
+ logout_ovh($soap,$session);
+
+} catch(SoapFault $fault) {
+  echo $fault;
+}
+if($regz["is_success"] == 1){
+$regz["response_text"] = $result;
+} else{
+$regz["response_text"] = "Update DNS failed";
+}
+
+return $regz;
 }
 
 function ovh_registry_update_whois_info(){
-
-/* try {
-
- //login
-   $soap = ovh_open();
-   $session = login_ovh();
-
- //nicModifyInfos
- $soap->nicModifyInfos($session, "name ", "firstname", "legalform", "organisation", "address", "zip ", "city", "country", "phone", "fax", "email", "spareEmail", "language", "vat");
-
-
- //logout
-   logout_ovh($soap,$session);
-
-} catch(SoapFault $fault) {
- echo $fault;
-} */
-
-/* try {
-
- //login
-   $soap = ovh_open();
-   $session = login_ovh();
-
- //nicPublicInfo
- $result = $soap->nicPublicInfo($session, "nic");
- echo "nicPublicInfo successfull\n";
- print_r($result); // your code here ...
-
- //logout
-   logout_ovh($soap,$session);
-
-} catch(SoapFault $fault) {
- echo $fault;
-} */
-
-/* try {
-
- //login
-   $soap = ovh_open();
-   $session = login_ovh();
-
- //nicCreate
- $result = $soap->nicCreate($session, "name", "firstname", "password", "email", "phone", "fax", "address", "city", "area", "zip", "country", "language", false, "legalform", "organisation", "legalName", "legalNumber", "vat");
- echo "nicCreate successfull\n";
- print_r($result); // your code here ...
-
- //logout
-   logout_ovh($soap,$session);
- 
-} catch(SoapFault $fault) {
- echo $fault;
-} */
-
-
 }
 
 function ovh_registry_check_transfer($domain) {
-	 $domain_name = $domain;
 	 
 	try {
 		
@@ -220,13 +251,13 @@ function ovh_registry_check_transfer($domain) {
    $session = login_ovh();
 
  //domainCheck
- $result = $soap->domainCheck($session, "$domain_name");
+ $result = $soap->domainCheck($session, "$domain");
  
  //logout
 logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
- echo $fault;
+  echo $fault;
 }
 
 $ret["is_success"] = 1;
@@ -234,7 +265,7 @@ $ret["attributes"]["reason"] = "Domain name can't be transfered";
 	if($result[1]->value == 1){
 		    $ret["attributes"]["transferrable"] = 1;
   } else {
-			$ret["attributes"]["transferrable"] = 0;
+		    $ret["attributes"]["transferrable"] = 0;
 	}
 		
 	return $ret;
@@ -249,21 +280,21 @@ function ovh_registry_transfert_domain($adm_login,$adm_pass,$domain_name,$contac
 	global $conf_ovh_nicbilling;
 	global $conf_ovh_boolean;
 	global $conf_addr_primary_dns;
-    global $conf_addr_secondary_dns;
+        global $conf_addr_secondary_dns;
 
 	$ovh_boolean = $conf_ovh_boolean;
 	$ovh_username = $conf_ovh_username;
 	$dnsfirst_ovh = $conf_addr_primary_dns;
-    $dnssecond_ovh = $conf_addr_secondary_dns;
+        $dnssecond_ovh = $conf_addr_secondary_dns;
 
-    $ovh_domain_name = $domain_name;
-    $ovh_nicadmin = $conf_ovh_nicadmin;
-    $ovh_nictech = $conf_ovh_nictech;
-    $ovh_nicowner = $conf_ovh_nicowner;
-    $ovh_nicbilling = $conf_ovh_nicbilling;
+        $ovh_domain_name = $domain_name;
+        $ovh_nicadmin = $conf_ovh_nicadmin;
+        $ovh_nictech = $conf_ovh_nictech;
+        $ovh_nicowner = $conf_ovh_nicowner;
+        $ovh_nicbilling = $conf_ovh_nicbilling;
 
-    $ovh_dns1 = $dns_servers[0];
-    $ovh_dns2 = $dns_servers[1];
+        $ovh_dns1 = $dns_servers[0];
+        $ovh_dns2 = $dns_servers[1];
 
 if($dns_servers[0] == "default"){
 	$ovh_dns1 = $dnsfirst_ovh;
@@ -297,7 +328,7 @@ $soap->resellerDomainTransfer($session, "$ovh_domain_name", "authinfo", "none", 
 logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
- echo $fault;
+  echo $fault;
 } 
 if($regz["is_success"] == 1){
 	$regz["response_text"] = "Transfert successful";
@@ -320,7 +351,7 @@ function ovh_registry_check_renew($domain_name) {
 logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
- echo $fault;
+  echo $fault;
 }
 
 $ret["is_success"] = 1;
@@ -328,7 +359,7 @@ $ret["response_text"] = "Domain name can't be renewed";
 	if($result[2]->value == 1){
 		    $ret["attributes"]["renewable"] = 1;
   } else {
-			$ret["attributes"]["renewable"] = 0;
+		    $ret["attributes"]["renewable"] = 0;
 	}
 		
 	return $ret;
@@ -359,10 +390,10 @@ return array( "attributes" => array("status" => 1), "response_text" => _("Only o
  $regz["response_text"] = "Renew successful";
 
  //logout
-logout_ovh($soap,$session);
+   logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
- echo $fault;
+  echo $fault;
 } 
 return $regz;
  }
@@ -382,10 +413,10 @@ try {
  $result = $soap->domainInfo($session, "$domain_name");
  
  //logout
-logout_ovh($soap,$session);
+   logout_ovh($soap,$session);
 
 } catch(SoapFault $fault) {
- echo $fault;
+  echo $fault;
 }
 
 $ret["is_success"] = 1;
@@ -455,6 +486,71 @@ function ovh_registry_change_password(){
 function ovh_registry_get_auth_code(){
 }
 
+function ovh_registry_add_nick_handle(){
+
+/*
+
+Parameters
+
+    * stringsession : the session id
+    * stringname : the contact name
+    * stringfirstname : the contact firstname
+    * stringpassword : the contact password
+    * stringemail : the contact email
+    * stringphone : the contact phone number (international format, ex: +33.899701761)
+    * stringfax : the contact fax number
+    * stringaddress : the contact address
+    * stringcity : the contact city
+    * stringarea : the contact area
+    * stringzip : the contact zip code
+    * stringcountry : the contact country (be|fr|pl|es|lu|ch|de|...)
+    * stringlanguage : the contact language (fr|en|pl|es|de)
+    * booleanisOwner : is it an owner nic ? default false
+    * stringlegalform : the contact legalform (corporation|individual|association|other)
+    * stringorganisation : organisation name
+    * stringlegalName : the contact legalname
+    * stringlegalNumber : the contact legalnumber (SIRET/SIREN/...)
+    * stringvat : the contact vat
+
+Returns
+the new contact handle id
+
+//nicCreate
+ $result = $soap->nicCreate($session, "name", "firstname", "password", "email", "phone", "fax", "address", "city", "area", "zip", "country", "language", false, "legalform", "organisation", "legalName", "legalNumber", "vat");
+ echo "nicCreate successfull\n";
+ print_r($result); // your code here ...
+*/
+}
+
+function ovh_registry_modify_nick_handle(){
+/*
+
+Parameters
+
+    * stringsession : the session id
+    * stringname : the name
+    * stringfirstname : the firstname
+    * stringlegalform : the legalform (individual|corporation|association|other)
+    * stringorganisation : the organisation name
+    * stringaddress : the address
+    * stringzip : the zip
+    * stringcity : the city
+    * stringcountry : the country code
+    * stringphone : the phone
+    * stringfax : the fax
+    * stringemail : the email
+    * stringspareEmail : the spare email
+    * stringlanguage : the language (fr|en|de|pl|es)
+    * stringvat : the vat number
+
+//nicModifyInfos
+ $soap->nicModifyInfos($session, "name", "firstname", "legalform", "organisation", "address", "zip", "city", "country", "phone", "fax", "email", "spareEmail", "language", "vat");
+ echo "nicModifyInfos successfull\n";
+*/
+}
+
+function ovh_registry_delete_nick_handle(){
+}
 
 $configurator = array(
 	"title" => _("OVH configuration"),
@@ -506,9 +602,9 @@ $registry_api_modules[] = array(
 "name" => "ovh",
 "configure_descriptor" => $configurator,
 "registry_check_availability" => "ovh_registry_check_availability",
-"registry_add_nameserver" => "ovh_registry_modify_nameserver",
+"registry_add_nameserver" => "ovh_registry_add_nameserver",
 "registry_modify_nameserver" => "ovh_registry_modify_nameserver",
-"registry_delete_nameserver" => "ovh_registry_modify_nameserver",
+"registry_delete_nameserver" => "ovh_registry_delete_nameserver",
 "registry_get_auth_code" => "ovh_registry_get_auth_code",
 "registry_register_domain" => "ovh_registry_register_domain",
 "registry_update_whois_info" => "ovh_registry_update_whois_info",
@@ -518,5 +614,8 @@ $registry_api_modules[] = array(
 "registry_change_password" => "ovh_registry_change_password",
 "registry_get_whois" => "ovh_registry_get_whois",
 "registry_transfert_domain" => "ovh_registry_transfert_domain",
+"registry_add_nick_handle" => "ovh_registry_add_nick_handle",
+"registry_edit_nick_handle" => "ovh_registry_modify_nick_handle",
+"registry_delete_nick_handle" => "ovh_registry_delete_nick_handle",
 "registry_check_renew" => "ovh_registry_check_renew"
 );?>
